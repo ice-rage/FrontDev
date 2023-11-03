@@ -32,6 +32,9 @@
 .page-header__container {
   box-sizing: border-box;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
@@ -40,7 +43,6 @@
 }
 
 .page-header__logo {
-  margin-right: 237px;
   display: inline-block;
   width: 202px;
   height: 147px;
@@ -53,7 +55,6 @@
 
 .page-header__nav{
   display: inline-block;
-  margin-right: 230px;
 }
 
 .page-header__nav-link {
