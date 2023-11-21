@@ -202,10 +202,6 @@ img {
   margin-top: 147px;
 }
 .events__container {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -223,6 +219,10 @@ img {
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .events__title {
   -ms-flex-item-align: center;
