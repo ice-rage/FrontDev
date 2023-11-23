@@ -27,12 +27,19 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  padding-top: 147px;
-  font-family: "Open Sans", sans-serif;
+  background-color: #DEDEDEFA;
+  background-image: url("../assets/images/noise.png"), url("../assets/images/bg.png");
+  background-position: 0 0, 0, 0;
+  background-size: auto, 100% auto;
+  background-repeat: repeat, repeat-y;
+  color: #1F1F1F;
+  font-family: "Open Sans", "sans-serif";
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
   line-height: 1.375;
+  overflow-x: hidden;
+  padding-top: 147px;
 }
 .main {
   -webkit-box-flex: 1;
@@ -52,6 +59,14 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+button {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+  color: #1F1F1F;
+  font-family: "Open Sans", "sans-serif";
+  cursor: pointer;
+}
 .btn {
   display: inline-block;
   -webkit-box-sizing: border-box;
@@ -70,7 +85,6 @@ img {
   -webkit-transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   overflow: hidden;
-  cursor: pointer;
 }
 .btn:hover {
   background-color: #1F1F1F;
