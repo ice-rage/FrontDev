@@ -1,5 +1,6 @@
 debug.log
 node_modules
+dist
 
 # Visual Studio Code
 .vscode
