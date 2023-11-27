@@ -1,0 +1,90 @@
+<div class="pp" id="eventPP">
+  <div class="pp__wrapper">
+    <div class="pp__sticky-close">
+      <button class="pp__x-btn x-btn">
+        <svg class="x-btn__icon" width="12" height="12">
+          <use xlink:href="assets/icons/symbols.svg#x"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="pp__container">
+      <h2 class="pp__title">Заполните форму, <br /> и мы подберем площадку</h2>
+
+      <form class="pp__form form">
+        <div class="radio">
+          @@loop('radio-item.html', [
+            {
+              "name" : "format",
+              "value": "seminar",
+              "label": "Мастер-класс/семинар"
+            },
+            {
+              "name" : "format",
+              "value": "concert",
+              "label": "Концерт/выступление"
+            },
+            {
+              "name" : "format",
+              "value": "exhibition",
+              "label": "Выставка/показ"
+            },
+            {
+              "name" : "format",
+              "value": "other",
+              "label": "Другое"
+            }
+          ])
+        </div>
+
+        <label class="field">
+          <span class="field__title">Планируемое количество посетителей:</span>
+
+          <select class="field__select" name="amount">
+            <option value="20">до 20 человек</option>
+            <option value="100">от 20 до 100 человек</option>
+            <option value="500">до 100 до 500 человек</option>
+            <option value="1000">более 500 человек</option>
+          </select>
+        </label>
+
+        @@loop('required-field.html', [
+          {
+            "label" : "Имя",
+            "placeholder": "Имя",
+            "name": "first_name",
+          },
+          {
+            "label" : "Фамилия",
+            "placeholder": "Фамилия",
+            "name": "last_name",
+          },
+          {
+            "label" : "Телефон",
+            "placeholder": "+7 (___) ___ __ __",
+            "name": "phone",
+          },
+          {
+            "label" : "E-mail",
+            "placeholder": "E-mail",
+            "name": "email",
+          }
+        ])
+
+        <label class="field">
+          <span class="field__title">Есть пожелания? Напишите нам:</span>
+          <textarea class="field__textarea" name="wishes"></textarea>
+        </label>
+
+        <label class="check">
+          <input type="checkbox" name="agreement" class="check__input" required checked>
+          <span class="check__mark"></span>
+          <span class="check__label check__label--s">
+            Я соглашаюсь с пользовательским соглашением и с политикой использования 
+            персональных данных
+          </span>
+        </label>
+      </form>
+    </div>
+  </div>
+</div>
