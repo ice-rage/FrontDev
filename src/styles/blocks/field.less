@@ -3,6 +3,7 @@
   flex-direction: column;
 
   &__input,
+  &__input--date,
   &__textarea {
     box-sizing: border-box;
     display: block;
@@ -17,6 +18,19 @@
   &__input {
     height: 55px;
     padding: 0 20px;
+
+    &--date {
+      width: 55px;
+      margin-right: 15px;
+      padding-top: 17px;
+      padding-bottom: 16px;
+      text-align: center;
+
+      &:last-child {
+        min-width: 99px;
+        max-width: 110px;
+      }
+    }
   }
 
   &__textarea {
@@ -41,6 +55,12 @@
     color: @black;
   }
 
+  &__date {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
   &__select {
     box-sizing: border-box;
     display: block;
@@ -48,6 +68,7 @@
     height: 55px;
     padding: 0 20px;
     border: none;
+    border-right: 20px solid transparent;
     border-radius: 5px;
     background-color: @white;
     font-size: 16px;

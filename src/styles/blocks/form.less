@@ -1,0 +1,52 @@
+.form {
+  &__event-info,
+  &__client-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 59px;
+  }
+
+  &__event-info
+  {
+    flex-direction: column;
+    height: 210px;
+    margin-bottom: 30px;
+  }
+
+  &__client-contacts {
+    margin-bottom: 50px;
+  }
+
+  &__radio,
+  &__field {
+    min-width: 405px;
+  }
+
+  &__title {
+    display: block;
+    margin: 0 0 10px;
+    color: @black;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 643px;
+    margin-top: 38px;
+  }
+
+  &__submit-button {
+    padding: 15px 156px;
+  }
+
+  &__close-button {
+    padding-left: 40px;
+    padding-right: 40px;
+    border: none;
+    text-decoration: underline;
+  }
+}
