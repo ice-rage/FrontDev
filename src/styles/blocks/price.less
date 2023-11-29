@@ -1,0 +1,29 @@
+.price {
+  .box();
+
+  &--red {
+    .price__mark {
+      background-color: @red_dark;
+    }
+  }
+
+  &--black {
+    .price__mark {
+      background-color: @black;
+    }
+  }
+
+  &__mark {
+    .box-mark();
+  }
+
+  &__label {
+    margin-left: 9px;
+    font-size: 14px;
+    line-height: 19px;
+
+    &::before {
+      content: attr(data-price) " " attr(data-currency) " | ";
+    }
+  }
+}

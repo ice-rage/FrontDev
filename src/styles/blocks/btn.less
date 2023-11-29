@@ -9,11 +9,17 @@
   font-family: @font1;
   font-weight: 600;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 22px;
   text-align: center;
   text-decoration: none;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   overflow: hidden;
+
+  &--red {
+    border: none;
+    background-color: @red;
+    color: @white;
+  }
 
   &:hover {
     background-color: @black;
