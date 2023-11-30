@@ -1,56 +1,68 @@
 .form {
-  &__event-info,
-  &__client-info {
+  &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px 59px;
+    gap: 30px 60px;
+    width: 100%;
+
+    &--mb50 {
+      margin-bottom: 50px;
+    }
   }
 
-  &__event-info
-  {
-    flex-direction: column;
-    height: 210px;
-    margin-bottom: 30px;
+  &__group {
+    width: calc(50% - 30px);
   }
 
-  &__client-info {
-    margin-bottom: 50px;
-  }
-
-  &__radio,
   &__field {
-    min-width: 405px;
+    display: block;
+    width: 100%;
+
+    &--w50 {
+      width: calc(50% - 30px);
+    }
+
+    &--mb30 {
+      margin-bottom: 30px;
+    }
   }
 
   &__check {
-    margin-top: 30px;
+    &--mb40 {
+      margin-bottom: 40px;
+    }
   }
 
-  &__title {
-    display: block;
-    margin: 0 0 10px;
-    color: @black;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 25px;
-  }
-
-  &__buttons-wrapper {
+  &__btns {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-width: 643px;
-    margin-top: 38px;
+    align-items: center;
+    gap: 200px;
   }
 
-  &__submit {
+  &__submit-btn,
+  &__close-btn {
+    font-family: @font1;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: @black;
+  }
+
+  &__submit-btn {
+    width: 100%;
+    max-width: 400px;
     padding: 15px 156px;
   }
 
-  &__close {
-    padding-left: 40px;
-    padding-right: 40px;
+  &__close-btn {
     border: none;
+    outline: none;
+    padding: 1px 4px;
     text-decoration: underline;
+
+    &:hover {
+      background-color: initial;
+      color: initial;
+    }
   }
 }

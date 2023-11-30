@@ -1,17 +1,26 @@
 .x-btn {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 60px;
+  height: 60px;
   border: none;
   border-radius: 50%;
   outline: none;
-  padding: 18px;
   background-color: @black;
+  color: @white;
+  transition: background-color 0.2s;
 
-  &__icon {
-    min-width: 100%;
-    min-height: 100%;
+  &:hover {
+    @media (hover:hover) {
+      background-color: @red_dark;
+    }
   }
+
+  // &__icon {
+  //   min-width: 100%;
+  //   min-height: 100%;
+  // }
 
   &:hover {
     background-color: @red_dark;

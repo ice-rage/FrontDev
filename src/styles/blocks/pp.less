@@ -5,45 +5,37 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 90px 95px 50px;
-  background-color: rgba(28, 27, 27, 0.4);
-
-  @supports(backdrop-filter: blur(50px)) {
-    background-color: @gray_dark;
-    backdrop-filter: blur(50px);
-  }
-  
+  padding: 90px 50px 50px;
   overflow-y: auto;
   z-index: 110;
   display: none;
+  background-color: @gray;
+
+  @supports(backdrop-filter: blur(25px)) {
+    background-color: @black_40;
+    backdrop-filter: blur(25px);
+  }
 
   &__wrapper {
     box-sizing: border-box;
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 100%;
     max-width: 1210px;
+    width: 100%;
     margin: auto;
+    //padding: 70px 40px 40px;
     background-color: @gray;
     background-image: url("../assets/images/noise.png");
-    background-position: 0 0;
+    background-position: 0, 0;
     background-size: auto;
     background-repeat: repeat;
   }
 
-  &__container {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 0 40px 40px;
-  }
-
   &__sticky-close {
     position: sticky;
-    top: 0;
     align-self: flex-end;
+    top: 0;
     width: 0;
     height: 0;
   }
@@ -54,22 +46,33 @@
     right: -30px;
   }
 
+  &__container {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+  }
+
   &__title {
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
     margin: -40px 0 70px -85px;
     padding: 10px 85px;
-    width: 595px;
+    max-width: 595px;
     min-height: 80px;
     background-color: @black;
     text-transform: uppercase;
-    font-weight: 400;
     font-family: @font2;
+    font-weight: 400;
     font-size: 22px;
-    line-height: 1.36;
     color: @white;
+    line-height: 1.36;
     letter-spacing: 0.02em;
     z-index: 1;
+  }
+
+  &__form {
+    max-width: 870px;
+    margin: auto;
   }
 }
