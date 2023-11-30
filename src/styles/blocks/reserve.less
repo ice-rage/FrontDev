@@ -12,14 +12,16 @@
     font-size: 18px;
     line-height: 25px;
     color: @black;
+    background-color: yellow;
+  }
+
+  &__check-list {
+    grid-area: checks;
+    background-color: @coral;
   }
 
   &__checks {
-    display: flex;
-    flex-direction: column;
-    grid-area: checks;
-    row-gap: 10px;
-    background-color: @coral;
+    
   }
 
   &__scheme {
@@ -39,6 +41,8 @@
   &__scheme-wrapper {
     position: relative;
     width: 100%;
+    margin-top: 40px;
+    background-color: purple;
 
     // &::after {
     //   content: "";
@@ -62,15 +66,16 @@
   }
 
   &__ticket-list {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    // margin-top: 20px;
+    // margin-bottom: 10px;
+    background-color: blue;
   }
 
   &__tickets {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 15px;
+    //margin-bottom: 15px;
   }
 
   &__qty {
@@ -93,7 +98,7 @@
   &__total {
     font-weight: 600;
     font-size: 20px;
-    margin-bottom: 53px;
+    //margin-bottom: 53px;
     text-align: center;
 
     &::before {
@@ -119,8 +124,9 @@
   }
 
   &__price-list {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    //margin-top: 20px;
+    // margin-bottom: 10px;
+    background-color: red;
   }
 
   &__prices {
@@ -130,15 +136,49 @@
     gap: 15px;
   }
 
+  &__note-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: green;
+  }
+
+  &__note-item {
+    display: flex;
+    align-items: flex-end;
+    gap: 21px;
+    //margin-bottom: 13px;
+  }
+
   &__note-title {
     font-weight: 600;
     font-size: 18px;
+    background-color: aqua;
   }
-  
+
   &__note-label {
+    min-width: 116px;
+    padding-bottom: 2px;
     font-size: 14px;
     line-height: 20px;
     text-transform: lowercase;
+  }
+
+  &__available-container {
+    position: relative;
+    padding-right: 40px;
+    padding-bottom: 24px;
+  }
+
+  &__available-mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &:last-child {
+      margin-left: 12px;
+    }
   }
 
   // & > div {
