@@ -44,11 +44,17 @@
     position: relative;
 
     &::after {
-      content: "▼";
+      content: "";
       position: absolute;
-      top: 50%;
-      right: 25px;
-      transform: translateY(-50%);
+      top: 25px;
+      right: 27px;
+      width: 5px;
+      height: 5px;
+      border-right: 2px solid @black;
+      border-bottom: 2px solid @black;
+      transform: rotate(45deg);
+      
+      //transform: translateY(-50%);
       color: @black;
       pointer-events: none;
     }
