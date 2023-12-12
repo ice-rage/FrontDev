@@ -6,27 +6,26 @@
     font-weight: 500;
     font-size: 70px;
     line-height: 90px;
-    text-align: center;
+    margin-left: 29.946%;
   }
 
-  &__info-wrapper {
+  &__main-info {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    gap: 20px;
     max-width: 943px;
-    margin: 80px auto;
-    background-color: aqua;
+    margin: 80px 0 80px 27.391%;
   }
 
-  &__info-left, 
-  &__info-right {
+  &__info-block {
     display: flex;
     flex-direction: column;
     gap: 11px;
-  }
 
-  &__info-left {
-    text-align: right;
+    &--left {
+      text-align: right;
+    }
   }
 
   &__label {
@@ -47,13 +46,14 @@
   }
 
   &__picture {
-    margin: 0 60px 0 58px;
+    position: relative;
+    margin: 0 38px;
   }
 
   &__img {
     width: 497px;
+    min-width: 245px;
     height: auto;
-    min-width: 254px;
     object-fit: contain;
   }
 
@@ -64,13 +64,7 @@
   }
 
   &__program {
-    margin-top: 80px;
     margin-bottom: 75px;
-  }
-
-  &__description {
-    max-width: 868px;
-    margin-bottom: 50px;
   }
 
   &__tracklist {
