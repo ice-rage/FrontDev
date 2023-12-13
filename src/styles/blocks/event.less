@@ -23,8 +23,30 @@
     flex-direction: column;
     gap: 11px;
 
+    &::before, 
+    &::after,
+    &--left::before,
+    &--left::after {
+      content: "";
+      box-sizing: border-box;
+      height: 1px;
+      background: linear-gradient(270deg, @white, @black_gradient);
+    }
+
+    &::before,
+    &::after {
+      width: 89.8876%;
+    }
+
     &--left {
       text-align: right;
+
+      &::before,
+      &::after {
+        width: 92.667%;
+        margin-left: 10px;
+        mix-blend-mode: difference; 
+      }
     }
   }
 
