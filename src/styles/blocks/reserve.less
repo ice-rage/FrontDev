@@ -12,33 +12,31 @@
     font-size: 18px;
     line-height: 25px;
     color: @black;
-    text-align: left;
-    background-color: yellow;
   }
 
   &__checks {
+    grid-area: checks;
     display: flex;
     flex-direction: column;
-    grid-area: checks;
-    background-color: @coral;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   &__check {
-    background-color: aquamarine;
-    margin-bottom: 10px;
-
     &:first-of-type {
-      margin-top: 30px;
-    }
-
-    &:last-of-type {
-      margin-bottom: 0;
+      margin-top: 20px;
     }
   }
 
   &__scheme {
     grid-area: scheme;
-    background-color: @coral;
+  }
+
+  &__scheme-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
   }
 
   &__scheme-title {
@@ -52,7 +50,6 @@
   &__scheme-wrapper {
     position: relative;
     width: 100%;
-    background-color: purple;
 
     &::after {
       content: "";
@@ -63,6 +60,7 @@
   }
 
   &__scene {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -72,12 +70,15 @@
   
   &__order {
     grid-area: order;
-    background-color: @coral;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  &__ticket-list {
+  &__tickets-list {
     margin-top: 20px;
-    background-color: blue;
+    margin-bottom: 25px;
+    width: 100%;
   }
 
   &__tickets {
@@ -85,6 +86,10 @@
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__qty {
@@ -96,29 +101,17 @@
   &__sum {
     font-weight: 600;
     font-size: 18px;
-
-    &::after {
-      content : attr(data-currency);
-      margin-left: 4px;
-      font-size: 0.95em;
-    }
   }
 
   &__total {
+    align-self: center;
+    margin-bottom: 37px;
     font-weight: 600;
     font-size: 20px;
-    margin-bottom: 53px;
-    text-align: center;
 
     &::before {
       content: attr(data-caption);
       margin-right: 30px;
-    }
-
-    &::after {
-      content : attr(data-currency);
-      margin-left: 4px;
-      font-size: 0.95em;
     }
   }
 
@@ -128,70 +121,107 @@
   
   &__legend {
     grid-area: legend;
-    text-align: right;
-    background-color: @coral;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
-  &__price-list {
+  &__prices-list {
     margin-top: 20px;
-    background-color: red;
+    margin-bottom: 37px;
   }
 
   &__prices {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 15px;
-  }
-
-  &__note-list {
-    display: flex;
-    flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
-    background-color: green;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  &__note-item {
-    display: flex;
-    align-items: flex-end;
-    gap: 21px;
-    margin-bottom: 13px;
+  &__price-mark {
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    background-color: @black;
+    
+    &--red {
+      background-color: @red;
+    }
   }
 
-  &__note-title {
-    font-weight: 600;
-    font-size: 18px;
-    background-color: aqua;
-  }
-
-  &__note-label {
-    min-width: 116px;
-    padding-bottom: 2px;
-    font-size: 14px;
-    line-height: 20px;
-    text-transform: lowercase;
-  }
-
-  &__available-container {
+  &__price {
     position: relative;
-    padding-right: 40px;
-    padding-bottom: 24px;
+    font-size: 14px;
+
+    &::before {
+      content: " " attr(data-currency);
+      position: absolute;
+      top: 0;
+      left: 35px;
+      font-size: 0.95em;
+    }
+
+    &::after {
+      content: " | " attr(data-caption);
+      margin-left: 10px;
+    }
   }
 
-  &__available-mark {
+  &__notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 20px;
+  }
+
+  &__mark-container {
+    display: flex;
+    position: relative;
+    width: 36px;
+    height: 24px;
+    margin-right: 20px;
+  }
+
+  &__note-mark {
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     left: 0;
+    width: 66.667%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid @black;
 
-    &:last-child {
-      margin-left: 12px;
+    &--red {
+      left: 33.333%;
+      border: 1px solid @red_dark;
     }
+
+    &--filled {
+      left: 33.333%;
+      border: none;
+      background-color: #BFBFBF;
+    }
+  }
+
+  &__note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__designation {
+    font-size: 14px;
+    text-transform: lowercase;
   }
 
   & > div {
     box-sizing: border-box;
-    background-color: @coral;
     text-align: center;
   }
 }

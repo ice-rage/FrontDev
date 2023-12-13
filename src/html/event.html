@@ -153,7 +153,7 @@
               <label class="reserve__scheme-title">Сцена</label>
 
               <div class="reserve__scheme-wrapper">
-                <svg width="780" height="399">
+                <svg class="reserve__scene scene" width="780" height="399">
                   <use xlink:href="assets/icons/symbols.svg#restaurant-map"></use>
                 </svg>
               </div>
@@ -163,11 +163,12 @@
           <div class="reserve__order">
             <label class="reserve__section-title">Ваши пригласительные билеты</label>
 
-            <div class="reserve__ticket-list">
+            <div class="reserve__tickets-list">
               <div class="reserve__tickets">
                 <div class="reserve__qty" data-caption="шт." data-price="1400">9</div>
                 <div class="reserve__sum" data-currency="₽">12600</div>
               </div>
+
               <div class="reserve__tickets">
                 <div class="reserve__qty" data-caption="шт." data-price="1250">4</div>
                 <div class="reserve__sum" data-currency="₽">5000</div>
@@ -176,45 +177,42 @@
 
             <div class="reserve__total" data-caption="Сумма" data-currency="₽">17600</div>
 
-            <button type="submit" class="btn btn--red reserve__submit">Купить билеты</button>
+            <button type="submit" class="reserve__submit btn btn--red">Купить билеты</button>
           </div>
 
           <div class="reserve__legend">
             <label class="reserve__section-title">Стоимость пригласительного билета</label>
 
-            <div class="reserve__price-list">
+            <div class="reserve__prices-list">
               <div class="reserve__prices">
-                <div class="reserve__price price price--red">
-                  <span class="price__mark"></span>
-                  <span class="price__label" data-price="1400" data-currency="₽">1 персона</span>
-                </div>
-                
-                <div class="reserve__price price price--black">
-                  <span class="price__mark"></span>
-                  <div class="price__label" data-price="1250" data-currency="₽">1 персона</div>
-                </div>
+                <div class="reserve__price-mark reserve__price-mark--red"></div>
+                <div class="reserve__price" data-caption="1 персона" data-currency="₽">1400</div>
               </div>
 
-              <div class="reserve__note">
-                <h4 class="reserve__note-title">Примечание</h4>
-
-                <div class="reserve__note-list">
-                  <div class="reserve__note-item">
-                    <div class="reserve__available-container">
-                      <span class="reserve__available-mark legend-mark"></span>
-                      <span class="reserve__available-mark legend-mark legend-mark--red"></span>
-                    </div>
-                    
-                    <label class="reserve__note-label">Доступные места</label>
-                  </div>
-
-                  <div class="reserve__note-item">
-                    <span class="reserve__note-mark legend-mark legend-mark--filled"></span>
-                    <label class="reserve__note-label">Забронировано</label>
-                  </div>
-                </div>             
+              <div class="reserve__prices">
+                <div class="reserve__price-mark"></div>
+                <div class="reserve__price" data-caption="1 персона" data-currency="₽">1250</div>
               </div>
             </div>
+
+            <label class="reserve__section-title">Примечание</label>
+
+              <div class="reserve__notes-list">
+                <div class="reserve__note">
+                  <div class="reserve__mark-container">
+                    <div class="reserve__note-mark"></div>
+                    <div class="reserve__note-mark reserve__note-mark--red"></div>
+                  </div>
+                  <div class="reserve__designation">Доступные места</div>
+                </div>
+                
+                <div class="reserve__note">
+                  <div class="reserve__mark-container">
+                    <div class="reserve__note-mark reserve__note-mark--filled"></div>
+                  </div>
+                  <div class="reserve__designation">Забронировано</div>
+                </div>
+              </div>
           </div>
         </form>
       </article>
