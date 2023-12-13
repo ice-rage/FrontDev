@@ -27,10 +27,9 @@
     &::after,
     &--left::before,
     &--left::after {
+      .gradient-decoration();
+      
       content: "";
-      box-sizing: border-box;
-      height: 1px;
-      background: linear-gradient(270deg, @white, @black_gradient);
     }
 
     &::before,

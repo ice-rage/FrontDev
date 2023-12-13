@@ -8,13 +8,16 @@
   background-color: @black;
 
   &::after {
-    .checkmark();
-
     content: "";
     box-sizing: border-box;
+    display: block;
+    position: absolute;
     top: 4px;
     left: 9px;
     width: 8px;
     height: 14px;
+    border-bottom: 2px solid @white;
+    border-right: 2px solid @white;
+    transform: rotate(45deg);
   }
 }
