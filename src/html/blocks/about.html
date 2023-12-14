@@ -1,0 +1,65 @@
+<section class="about @@class">
+  <div class="about__container">
+    <h2 class="about__section-title section-title">О нас</h2>
+
+    <div class="about__first-block">
+      <h3 class="about__title">Проект «Millennials»</h3>
+      <p class="about__text">
+        Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и 
+        желанием сделать мир лучше, проявить себя. У них есть талант и стремление, 
+        у нас — возможность помочь им воплотить их мечту в реальность.
+      </p>
+    </div>
+
+    <div class="about__second-block">
+      <div class="about__first-picture-area">
+        <picture class="about__first-picture">
+          <img class="about__img" src="assets/images/about1.jpg">
+        </picture>
+      </div>
+
+      <div class="about__second-picture-area">
+        <picture class="about__second-picture">
+          <img class="about__img" src="assets/images/about2.jpg">
+        </picture>
+      </div>
+
+      <div class="about__title-area">
+        <h3 class="about__title about__title--w868">
+          Мы предоставляем площади для вашего мероприятия</h3>
+      </div>
+
+      <div class="about__text-area">
+        <p class="about__text">
+          И оказываем помощь с организацией, если вам это нужно. 
+          <br>Наша цель: вовлечь в культурную жизнь города как можно больше людей, 
+          помочь молодым ребятам сделать первые шаги к своей мечте и рассказать всем 
+          о том, что их волнует.
+        </p>
+      </div>
+    </div>
+
+    <div class="about__third-block">
+      <picture class="about__third-picture">
+        <img class="about__third-img" src="assets/images/about3.jpg">
+      </picture>
+
+      <div class="about__third-block-wrapper">
+        <p class="about__text about__text--mb90">
+          Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как 
+          это было классно.
+        </p>
+
+        @@include('arrow-link.html', 
+        {
+          "href": "#",
+          "link-label": "Показать все",
+          "class": "about__arrow-link",
+          "arrow-width": "91",
+          "arrow-height": "60"
+        })
+        <!-- <a href="#" class="about__arrow-link arrow-link">Смотреть все</a> -->
+      </div>
+    </div>
+  </div>
+</section>

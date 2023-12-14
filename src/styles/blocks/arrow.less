@@ -1,0 +1,18 @@
+.arrow {
+  color: @black;
+
+  &__icon {
+    fill: none;
+    stroke: @black;
+    stroke-width: 2;
+    transition: stroke 0.5s;
+
+    &--r90 {
+      transform: rotate(90deg);
+    }
+
+    &:hover {
+      stroke: @red_dark;
+    }
+  }
+}
