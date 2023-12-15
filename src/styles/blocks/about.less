@@ -1,6 +1,4 @@
 .about {
-  padding-bottom: 90px;
-
   &__container {
     .container();
   }
@@ -19,16 +17,20 @@
       max-width: 868px;
     }
 
-    // &--mt {
+    // &--mt120 {
     //   margin-top: -120px;
     // }
   }
 
   &__text {
-    //align-self: flex-end;
+    align-self: flex-end;
     width: 100%;
     max-width: 870px;
     font-size: 18px;
+
+    &--mt50 {
+      margin-top: 50px;
+    }
 
     &--mb90 {
       margin-bottom: 90px;
@@ -150,21 +152,5 @@
   &__third-block-wrapper {
     width: 100%;
     max-width: 344px;
-  }
-
-  &__arrow-link {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &:hover {
-      @media(hover: hover) {
-        color: @red_dark;
-      }
-    }
-  
-    &:active {
-      color: @red_dark;
-    }
   }
 }

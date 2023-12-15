@@ -1,9 +1,33 @@
 .arrow-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.2s;
   text-decoration: none;
   pointer-events: none;
+
+  &--vertical {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &--vertical &__arrow {
+    transform: rotate(90deg);
+    margin-bottom: 10px;
+  }
 
   &__link,
   &__arrow {
     pointer-events: auto;
+  }
+
+  &:hover {
+    @media(hover: hover) {
+      color: @red_dark;
+    }
+  }
+
+  &:active {
+    color: @red_dark;
   }
 }
