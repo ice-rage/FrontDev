@@ -1,6 +1,7 @@
 .pp {
   position: fixed;
   box-sizing: border-box;
+  display: none;
   top: 0;
   left: 0;
   right: 0;
@@ -8,7 +9,7 @@
   padding: 90px 50px 50px;
   overflow-y: auto;
   z-index: 110;
-  display: none;
+  backdrop-filter: blur(25px);
   background-color: @gray;
 
   @supports(backdrop-filter: blur(25px)) {
@@ -23,7 +24,7 @@
     flex-direction: column;
     max-width: 1210px;
     width: 100%;
-    margin: auto;
+    margin: 0 auto auto;
     background-color: @gray;
     background-image: url("../assets/images/noise.png");
     background-position: 0, 0;
