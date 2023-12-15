@@ -1,0 +1,46 @@
+.contacts-item {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    background-color: @black;
+    color: @red;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &__info {
+    display: block;
+    margin: 0 0 5px;
+    font-size: 16px;
+
+    &[href] {
+      text-decoration: none;
+      transition: color 0.2s;
+
+      &:hover {
+        @media (hover: hover) {
+          color: @red;
+        }
+      }
+
+      &:active {
+        color: @red;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
