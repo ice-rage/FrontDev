@@ -5,8 +5,10 @@
   width: 100%;
 
   &:hover {
-    .article-card__picture {
-      box-shadow: 0 0 30px fade(@black, 55%);
+    @media(hover: hover) {
+      .article-card__picture {
+        box-shadow: 0 0 30px fade(@black, 55%);
+      }
     }
   }
 
@@ -20,10 +22,12 @@
     text-decoration: none;
 
     &:hover {
-      & ~ .article-card__info {
-        .article-card__title-link {
-          color: @red;
-          text-decoration-color: @red;
+      @media(hover: hover) {
+        & ~ .article-card__info {
+          .article-card__title-link {
+            color: @red;
+            text-decoration-color: @red;
+          }
         }
       }
     }
@@ -82,8 +86,10 @@
     transition: color 0.2s, text-decoration-color 0.2s;
 
     &:hover {
-      color: @red;
-      text-decoration-color: @red;
+      @media(hover: hover) {
+        color: @red_dark;
+        text-decoration-color: @red_dark;
+      }
     }
   }
 

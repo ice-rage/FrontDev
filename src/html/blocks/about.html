@@ -50,16 +50,16 @@
           это было классно.
         </p>
 
-        @@include('arrow-link.html', 
-        {
-          "href": "#",
-          "link-label": "Показать все",
-          "class": "about__arrow-link",
-          "arrow-width": "91",
-          "arrow-height": "60"
-        })
-        <!-- <a href="#" class="about__arrow-link arrow-link">Смотреть все</a> -->
-      </div>
+        <a href="#" class="about__arrow-link arrow-link">
+          <div class="arrow-link__link link">Смотреть</div>
+          
+          <div class="arrow-link__arrow arrow">
+            <svg class="arrow__icon" width="91" height="60">
+              <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+            </svg>
+          </div>
+        </a>
+      </a>
     </div>
   </div>
 </section>

@@ -207,7 +207,9 @@
     cursor: pointer;
 
     &:hover {
-      color: @red;
+      @media(hover: hover) {
+        color: @red;
+      }
     }
   }
 

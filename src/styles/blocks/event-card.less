@@ -11,10 +11,14 @@
     color: @black;
     text-decoration: none;
   }
-  
-  &__link:hover &__title {
-    color: @red;
-    text-decoration-color: @red;
+
+  &__link &__title {
+    &:hover {
+      @media(hover: hover) {
+        color: @red;
+        text-decoration-color: @red;
+      }
+    }
   }
   
   &__picture {

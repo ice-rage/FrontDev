@@ -11,12 +11,11 @@
     <a href="#" class="article-card__title-link">
       <h4 class="article-card__title">@@title</h4>
 
-      @@include('arrow.html', 
-      { 
-        "class": "article-card__arrow",
-        "width": "92",
-        "height": "62"
-      })
+      <div class="article-card__arrow arrow">
+        <svg class="arrow__icon" width="91" height="60">
+          <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+        </svg>
+      </div>
     </a>
 
     <p class="article-card__description">@@descr</p>

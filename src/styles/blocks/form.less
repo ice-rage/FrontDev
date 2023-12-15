@@ -61,8 +61,10 @@
     text-decoration: underline;
 
     &:hover {
-      background-color: initial;
-      color: @red_dark;
+      @media(hover: hover) {
+        background-color: initial;
+        color: @red_dark;
+      }
     }
   }
 }

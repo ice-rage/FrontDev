@@ -1,20 +1,9 @@
 .arrow-link {
-  font-weight: 600;
-  font-size: 16px;
-  transition: color 0.2s;
-
-  &:hover {
-    @media(hover: hover) {
-      color: @red_dark;
-    }
-  }
-
-  &:active {
-    color: @red_dark;
-  }
+  text-decoration: none;
+  pointer-events: none;
 
   &__link,
   &__arrow {
-    color: @black;
+    pointer-events: auto;
   }
 }
