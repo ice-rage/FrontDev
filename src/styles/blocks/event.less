@@ -9,6 +9,10 @@
     text-align: center;
   }
 
+  &__decoration {
+    height: 1px;
+  }
+
   &__main-info {
     display: flex;
     justify-content: space-between;
@@ -20,31 +24,10 @@
   &__info-block {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-
-    &::before, 
-    &::after,
-    &--left::before,
-    &--left::after {
-      .gradient-decoration();
-      
-      content: "";
-    }
-
-    &::before,
-    &::after {
-      width: 89.8876%;
-    }
+    gap: 11px;
 
     &--left {
       text-align: right;
-
-      &::before,
-      &::after {
-        width: 92.667%;
-        margin-left: 10px;
-        mix-blend-mode: difference; 
-      }
     }
   }
 

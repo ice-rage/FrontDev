@@ -8,30 +8,25 @@
 
   &__border {
     display: flex;
+    justify-content: space-between;
+    gap: 7.346%;
     margin-bottom: 60px;
+  }
 
-    &::before,
-    &::after {
-      content: "";
-      flex-grow: 1;
-      height: 2px;
-      width: 2px;
-    }
-
-    &::before {
-      margin-right: 50px;
-      background: linear-gradient(270deg, @black_gradient 0%, @white_gradient 82.86%);
-    }
-
-    &::after {
-      margin-left: 50px;
-      background: linear-gradient(90deg, @black_gradient 0%, @white_gradient 100%);
-    }
+  &__decoration {
+    height: 2px;
   }
 
   &__wrapper {
+    position: relative;
     display: flex;
     justify-content: space-between;
+  }
+
+  &__left-block {
+    width: 100%;
+    max-width: 384px;
+    margin-right: 30px;
   }
 
   &__nav {
@@ -39,7 +34,7 @@
     display: flex;
     flex-direction: column;
     gap: 22px;
-    margin-right: 30px;
+    margin-bottom: 100px;
     padding-left: 26px;
 
     &::before {
@@ -53,9 +48,17 @@
     }
   }
 
-  &__nav-link {
-    display: block;
+  &__nav-link,
+  &__confidentiality,
+  &__cookies, 
+  &__creator-label {
     font-weight: 600;
+  }
+
+  &__nav-link,
+  &__confidentiality,
+  &__cookies {
+    display: block;
     text-decoration: none;
     transition: color 0.2s;
 
@@ -68,5 +71,40 @@
     &:active {
       color: @red_dark;
     }
+  }
+
+  &__politics {
+    display: flex;
+    gap: 15.625%;
+    margin-top: 20px;
+  }
+
+  &__center-block {
+    position: absolute;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    left: calc(50% - 80px);
+    width: 160px;
+  }
+
+  &__sn-icon, 
+  &__creator-img {
+    vertical-align: bottom;
+  }
+
+  &__right-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 410px;
+  }
+
+  &__creator {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
   }
 }
