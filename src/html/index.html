@@ -18,14 +18,7 @@
           </p>
         </header>
 
-        <section class="home__offers offers">
-          <span class="offers__title">Я хочу:</span>
-
-          <div class="offers__btns">
-            <button type="button" class="offers__event-btn btn">Провести мероприятие</button>
-            <button type="button" class="offers__rent-btn btn">Стать арендатором</button>
-          </div>
-        </section>
+        @@include('blocks/offers.html', { "class": "home__offers" })
 
         @@include('blocks/about.html', { "class": "home__about" })
 
@@ -41,7 +34,7 @@
 
         @@include('blocks/blog-listing.html', { "class": "home__blog-listing" })
         
-        @@include('blocks/contacts.html', { "class": "home__contacts" })
+        @@include('blocks/info.html', { "class": "home__info" })
 
         <section class="home__blockquote blockquote">
           <span class="blockquoute__first-line">Просто делайте, что нравится,</span>
