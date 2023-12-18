@@ -1,3 +1,21 @@
 .breadcrumb {
-  
+  .container();
+
+  &__items {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline;
+  }
+
+  &__item + &__item {
+    &::before {
+      content: "\00a0/";
+    }
+  }
+
+  &__item-link {
+    font-weight: 400;
+  }
 }
