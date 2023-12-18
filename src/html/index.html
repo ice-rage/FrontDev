@@ -3,7 +3,15 @@
   @@include('blocks/head.html')
   
   <body class="body">
-    @@include('blocks/page-header.html')
+    <header class="page-header">
+      <div class="page-header__container">
+        @@include('blocks/page-header.html')
+
+        <div class="page-header__user">
+          <a href="#" class="page-header__user-btn btn">Войти</a>
+        </div>
+      </div>
+    </header>
     
     <main class="main">
       <div class="home">

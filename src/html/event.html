@@ -3,7 +3,20 @@
   @@include('blocks/head.html')
   
   <body class="body">
-    @@include('blocks/page-header.html')
+    <header class="page-header">
+      <div class="page-header__container">
+        @@include('blocks/page-header.html')
+        
+        <div class="page-header__user">
+          <a href="#" class="page-header__profile-link link">Александр С.</a>
+          <a href="#" class="page-header__log-out-link link">
+            <svg class="page-header__log-out-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#log-out"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
     
     <main class="main">
       <div class="event__breadcrumb breadcrumb">
