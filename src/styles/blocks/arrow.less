@@ -1,0 +1,23 @@
+.arrow {
+  display: flex;
+  transition: color 0.2s;
+  cursor: pointer;
+
+  &--90deg {
+    transform: rotate(90deg);
+  }
+
+  &--180deg {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    @media(hover: hover) {
+      color: @red_A5;
+    }
+  }
+
+  &:active {
+    color: @red_A5;
+  }
+}

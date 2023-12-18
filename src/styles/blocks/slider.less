@@ -1,0 +1,26 @@
+.slider {
+  display: flex;
+  justify-content: space-between;
+  width: 39.355%;
+  max-width: 525px;
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    width: 15px;
+    height: 2px;
+    border: none;
+    border-radius: 2px;
+    background-color: @gray_BF;
+
+    &--active {
+      background-color: @black;
+    }
+  }
+}

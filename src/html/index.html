@@ -18,18 +18,28 @@
           </p>
         </header>
 
-        @@include('blocks/blog-listing.html', { "class": "home__listing" })
+        <section></section>
 
         @@include('blocks/about.html', { "class": "home__about" })
 
-        <section class="listing home__listing"></section>
+        <section class="home__events-listing">
+          @@include('blocks/events-listing.html')
+
+          @@include('blocks/slider.html', {
+            "class": "listing__slider",
+            "width": "91",
+            "height": "60"
+          })
+        </section>
+
+        @@include('blocks/blog-listing.html', { "class": "home__blog-listing" })
         
         @@include('blocks/contacts.html', { "class": "home__contacts" })
 
-        <div class="home__blockquote blockquote">
+        <section class="home__blockquote blockquote">
           <span class="blockquoute__first-line">Просто делайте, что нравится,</span>
           <span class="blockquoute__second-line">а мы вам поможем</span>
-        </div>
+        </section>
       </div>
     </main>
     

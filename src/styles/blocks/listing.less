@@ -6,13 +6,24 @@
 
   &__events-list {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 -30px -120px;
-  }
+    column-gap: 4.423%;
+    margin-bottom: 70px;
+    overflow: hidden;
 
-  &__event-card {
-    width: calc(33.333% - 60px);
-    margin: 0 30px 120px;
+    & > .event-card {
+      min-width: 30.359%;
+    }
+
+    &--wrap {
+      flex-wrap: wrap;
+      row-gap: 7.5em;
+      overflow: visible;
+
+      & > .event-card {
+        width: 30.359%;
+        min-width: 280px;
+      }
+    }
   }
 
   &__link {
