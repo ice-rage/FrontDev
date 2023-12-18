@@ -1,14 +1,22 @@
 .info {
   &--vertical &__items {
     flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
     width: 100%;
     margin-right: 0;
   }
 
   &--vertical .info-item {
     flex-direction: column;
-    text-align: center;
+    gap: 40px;
     width: 100%;
+    max-width: 401px;
+    text-align: center;
+  }
+
+  &--vertical .info-item__data {
+    margin-bottom: 0;
   }
 
   &__container {
