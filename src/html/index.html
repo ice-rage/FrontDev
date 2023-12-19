@@ -3,15 +3,7 @@
   @@include('blocks/head.html')
   
   <body class="body">
-    <header class="page-header">
-      <div class="page-header__container">
-        @@include('blocks/page-header.html')
-
-        <div class="page-header__user">
-          <a href="#" class="page-header__user-btn btn">Войти</a>
-        </div>
-      </div>
-    </header>
+    @@include('blocks/page-header.html')
     
     <main class="main">
       <div class="home">
@@ -44,10 +36,7 @@
         
         @@include('blocks/info.html', { "class": "home__info" })
 
-        <section class="home__blockquote blockquote">
-          <span class="blockquoute__first-line">Просто делайте, что нравится,</span>
-          <span class="blockquoute__second-line">а мы вам поможем</span>
-        </section>
+        @@include('blocks/blockquote.html', { "class": "home__blockquote" })
       </div>
     </main>
     
