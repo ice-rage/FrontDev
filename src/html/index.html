@@ -22,21 +22,20 @@
 
         @@include('blocks/about.html', { "class": "home__about" })
 
-        <section class="home__events-listing">
-          @@include('blocks/events-listing.html')
+        <div class="home__events-listing">
+          @@include('blocks/events-list.html')
 
-          @@include('blocks/slider.html', {
-            "class": "listing__slider",
-            "width": "91",
-            "height": "60"
-          })
-        </section>
+          @@include('blocks/slider.html')
+        </div>
 
         @@include('blocks/blog-listing.html', { "class": "home__blog-listing" })
         
         @@include('blocks/info.html', { "class": "home__info" })
 
-        @@include('blocks/blockquote.html', { "class": "home__blockquote" })
+        <section class="quote home__quote">
+          <span class="quoute__first-line">Просто делайте, что нравится,</span>
+          <span class="quoute__second-line">а мы вам поможем</span>
+        </section>
       </div>
     </main>
     

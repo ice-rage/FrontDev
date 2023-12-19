@@ -1,5 +1,8 @@
 .event-card {
   display: flex;
+  width: 405px;
+  max-width: 100%;
+  //min-width: 280px;
 
   &__link {
     display: flex;
@@ -9,18 +12,16 @@
     text-decoration: none;
   }
 
-  &__link &__title {
-    &:hover {
-      @media(hover: hover) {
-        color: @red_BC;
-        text-decoration-color: @red_BC;
-      }
+  &__link:hover &__title {
+    @media(hover: hover) {
+      color: @red_BC;
+      text-decoration-color: @red_BC;
     }
   }
   
   &__picture {
-    position: relative;
     display: block;
+    position: relative;
     width: 100%;
     margin: 0 0 25px;
     font-size: 0;
@@ -36,8 +37,8 @@
   }
   
   &__img {
-    position: absolute;
     display: block;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -46,23 +47,25 @@
   }
   
   &__title {
+    margin: 0 0 15px;
+    min-height: 66px;
     color: @black;
-    font-family: @font1;
     font-weight: 700;
     font-size: 24px;
-    line-height: 32px;
-    text-decoration: underline transparent;
+    line-height: 33px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
     transition: color 0.2s, text-decoration-color 0.2s;
   }
   
   &__description {
-    max-width: 393px;
-    margin: 15px auto;
+    margin: 0 0 auto;
     font-size: 16px;
     line-height: 22px;
   }
   
   &__time {
+    margin: 15px 0 0;
     font-weight: 300;
     font-size: 14px;
     line-height: 19px;

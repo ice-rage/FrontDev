@@ -7,23 +7,22 @@
 
   &__events-list {
     display: flex;
-    column-gap: 4.423%;
     overflow: hidden;
-
-    & > .event-card {
-      min-width: 30.359%;
-    }
+    margin: 0 -30px -120px;
 
     &--wrap {
       flex-wrap: wrap;
-      row-gap: 7.5em;
-      overflow: visible;
 
-      & > .event-card {
-        width: 30.359%;
+      .listing__event-card {
+        width: calc(33.333% - 60px);
         min-width: 280px;
       }
     }
+  }
+
+  &__event-card {
+    min-width: max(280px, 29.053%);
+    margin: 0 2.152% 7.5em;
   }
 
   &__link {
