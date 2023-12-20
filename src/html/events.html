@@ -17,18 +17,22 @@
             </li>
           </ul>
         </div>
-'
-        @@include('blocks/events-list.html', { "class": "listing__events-list--wrap" })
 
-        <div class="events__arrow-link arrow-link arrow-link--vertical">
-          <a href="#" class="arrow-link__link link">Показать еще</a>
-          
-          <a href="#" class="arrow-link__arrow arrow arrow--90deg">
-            <svg class="arrow__icon" width="91" height="91">
-              <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-            </svg>
-          </a>
-        </div>
+        <section class="listing events__listing">
+          <h2 class="listing__title section-title">Мероприятия</h2>
+        
+          @@include('blocks/events-list.html', { "class": "listing__events-list--wrap" })
+
+          <div class="events__arrow-link arrow-link arrow-link--vertical">
+            <a href="#" class="arrow-link__link link">Показать еще</a>
+            
+            <a href="#" class="arrow-link__arrow arrow">
+              <svg class="arrow__icon" width="91" height="91">
+                <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </section>
 
         <section class="events__additional-services additional-services">
           <h2 class="section-title additional-services__title">Дополнительные услуги</h2>
@@ -143,60 +147,58 @@
 
         @@include('blocks/offers.html', { "class": "events__offers" })
 
-        <div class="events__info info info--vertical">
+        <section class="info events__info">
           <div class="info__container">
-            <div class="info__wrapper">
-              <div class="info__items">
-                <div class="info-item">
-                  <div class="info-item__img">
-                    <svg class="info-item__icon" width="24" height="24">
-                      <use xlink:href="assets/icons/symbols.svg#prices"></use>
-                    </svg>
-                  </div>
-        
-                  <div class="info-item__content">
-                    <h4 class="info-item__title">Цены</h4>
-                    <p class="info-item__data">
-                      Цены, указанные на сайте, носят информационный характер. Мы 
-                      придерживаемся индивидуального подхода в работе с клиентом.
-                    </p>
-                  </div>
+            <div class="info__items info__items--vertical">
+              <div class="info-item">
+                <div class="info-item__img">
+                  <svg class="info-item__icon" width="24" height="24">
+                    <use xlink:href="assets/icons/symbols.svg#prices"></use>
+                  </svg>
                 </div>
-        
-                <div class="info-item">
-                  <div class="info-item__img">
-                    <svg class="info-item__icon" width="24" height="24">
-                      <use xlink:href="assets/icons/symbols.svg#contacts"></use>
-                    </svg>
-                  </div>
-        
-                  <div class="info-item__content">
-                    <h4 class="info-item__title">Контакты</h4>
-                    <p class="info-item__data">Отдел организации мероприятий</p>
-                    <a href="tel:74993500730" class="info-item__data">+7 499 350 0730</a>
-                    <a href="mailto:hi@tagree.ru" class="info-item__data">hi@tagree.ru</a>
-                  </div>
+      
+                <div class="info-item__content">
+                  <h4 class="info-item__title">Цены</h4>
+                  <p class="info-item__data">
+                    Цены, указанные на сайте, носят информационный характер. Мы придерживаемся 
+                    индивидуального подхода в работе с клиентом.
+                  </p>
                 </div>
-        
-                <div class="info-item">
-                  <div class="info-item__img">
-                    <svg class="info-item__icon" width="24" height="24">
-                      <use xlink:href="assets/icons/symbols.svg#advantage"></use>
-                    </svg>
-                  </div>
-        
-                  <div class="info-item__content">
-                    <h4 class="info-item__title">Преимущество</h4>
-                    <p class="info-item__data">
-                      Мы имеем все возможности для того, чтобы помочь как малому бизнесу и 
-                      молодым талантам, так и большим корпорациям и холдингам.
-                    </p>
-                  </div>
+              </div>
+      
+              <div class="info-item">
+                <div class="info-item__img">
+                  <svg class="info-item__icon" width="24" height="24">
+                    <use xlink:href="assets/icons/symbols.svg#contacts"></use>
+                  </svg>
+                </div>
+      
+                <div class="info-item__content">
+                  <h4 class="info-item__title">Контакты</h4>
+                  <p class="info-item__data">Отдел организации мероприятий</p>
+                  <a href="tel:74993500730" class="info-item__data">+7 499 350 0730</a>
+                  <a href="mailto:hi@tagree.ru" class="info-item__data">hi@tagree.ru</a>
+                </div>
+              </div>
+      
+              <div class="info-item">
+                <div class="info-item__img">
+                  <svg class="info-item__icon" width="24" height="24">
+                    <use xlink:href="assets/icons/symbols.svg#advantage"></use>
+                  </svg>
+                </div>
+      
+                <div class="info-item__content">
+                  <h4 class="info-item__title">Преимущество</h4>
+                  <p class="info-item__data">
+                    Мы имеем все возможности для того, чтобы помочь как малому бизнесу и 
+                    молодым талантам, так и большим корпорациям и холдингам.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </main>
     

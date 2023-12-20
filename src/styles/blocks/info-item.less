@@ -3,6 +3,10 @@
   align-items: center;
   gap: 54px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &__img {
     display: flex;
     justify-content: center;
@@ -11,6 +15,7 @@
     height: 110px;
     background-color: @black;
     color: @red_BC;
+    object-fit: cover;
   }
 
   &__title {

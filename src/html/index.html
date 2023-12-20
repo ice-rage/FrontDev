@@ -23,7 +23,15 @@
         @@include('blocks/about.html', { "class": "home__about" })
 
         <div class="home__events-listing">
-          @@include('blocks/events-list.html')
+          <section class="listing events__listing">
+            <h2 class="listing__title section-title">Мероприятия</h2>
+          
+            @@include('blocks/events-list.html')
+          
+            @@include('blocks/slider.html', { "class": "listing__slider" })
+          
+            <a href="#" class="listing__link link">Смотреть все</a>
+          </section>
         </div>
 
         @@include('blocks/blog-listing.html', { "class": "home__blog-listing" })
