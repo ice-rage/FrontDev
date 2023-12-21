@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 147px;
   background-color: @gray;
   background-image: url("../assets/images/bg.png"), url("../assets/images/noise.png");
   background-position: 0 0, 0, 0;
@@ -20,41 +21,34 @@
   font-style: normal;
   line-height: 1.362;
   overflow-x: hidden;
-  padding-top: 147px;
-  //zoom: 0.8;
 }
 
 .main {
   flex: 1 0 auto;
-  width: 100%;
 }
 
 a {
-  color: @black;
   outline: none;
+  color: @black;
 }
 
 img {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
   object-fit: cover;
 }
 
-button {
-  box-shadow: none;
-  outline: none;
-  color: @black;
-  font-family: @font1;
-  cursor: pointer;
-}
-
+button,
 input,
 textarea,
 select {
   box-shadow: none;
   outline: none;
-  color: @black;
-  font-family: @font1;
+}
+
+input,
+textarea,
+select {
   font-size: 16px;
 }
 

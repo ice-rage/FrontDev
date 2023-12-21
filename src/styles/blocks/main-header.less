@@ -5,30 +5,26 @@
   &__text {
     padding-left: 40px;
     padding-right: 40px;
-    text-align: center;
-    text-transform: uppercase;
+    color: @black;
     font-family: @font2;
     font-weight: 400;
     font-size: 45px;
     line-height: 1.28;
-    color: @black;
-  }
-
-  &__title {
-    margin: 0 0 70px;
+    text-align: center;
+    text-transform: uppercase;
   }
 
   &__text {
     margin: 0 auto;
-    max-width: 990px;
     width: 100%;
+    max-width: 990px;
   }
 
   &__picture {
     position: relative;
     display: block;
-    margin-bottom: 70px;
     width: 100%;
+    margin: 70px 0;
   }
 
   &__picture::before {
@@ -43,6 +39,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    object-fit: contain;
+    height: 100%;
   }
 }
