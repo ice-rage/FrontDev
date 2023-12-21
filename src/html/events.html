@@ -5,19 +5,17 @@
   <body class="body">
     @@include('blocks/page-header.html')
 
+    <include src="blocks/breadcrumbs.html">
+      <li class="breadcrumbs__item">
+        <a href="index.html" class="breadcrumbs__item-link link">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="events.html" class="breadcrumbs__item-link link">Мероприятия</a>
+      </li>
+    </include>
+
     <main class="main">
       <div class="events">
-        <div class="events__breadcrumb breadcrumb">
-          <ul class="breadcrumb__items">
-            <li class="breadcrumb__item">
-              <a href="index.html" class="breadcrumb__item-link link">Главная</a>
-            </li>
-            <li class="breadcrumb__item">
-              <a href="events.html" class="breadcrumb__item-link link">Мероприятия</a>
-            </li>
-          </ul>
-        </div>
-
         <section class="listing events__listing">
           <h2 class="listing__title section-title">Мероприятия</h2>
         

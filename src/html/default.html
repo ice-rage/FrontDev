@@ -4,6 +4,18 @@
   
   <body class="body">
     @@include('blocks/page-header.html')
+
+    <include src="blocks/breadcrumbs.html">
+      <li class="breadcrumbs__item">
+        <a href="index.html" class="breadcrumbs__item-link link">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#" class="breadcrumbs__item-link link">Раздел</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="#" class="breadcrumbs__item-link link">Страница раздела</a>
+      </li>
+    </include>
     
     <main class="main">
       <article class="article">
@@ -37,7 +49,7 @@
 
             <blockquote>Здесь содержится цитата</blockquote>
 
-            <img src="assets/images/image.jpg" alt="Подпись картинки"/>
+            <img src="assets/images/about1.jpg" alt="Подпись картинки"/>
           </div>
         </div>
       </article>
