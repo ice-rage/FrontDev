@@ -11,6 +11,7 @@
     "gulp-csso": "^4.0.1",
     "gulp-file-include": "^2.3.0",
     "gulp-format-html": "^1.2.5",
+    "gulp-html-tag-include": "^1.0.1",
     "gulp-imagemin": "^8.0.0",
     "gulp-less": "^5.0.0",
     "gulp-plumber": "^1.2.1",

@@ -1,8 +1,9 @@
 import gulp from "gulp";
 import del from "del";
 
-import include from "gulp-file-include";
-import formatHTML from "gulp-format-html";
+import includeFile from "gulp-file-include";
+import includeHtmlTag from "gulp-html-tag-include"
+import formatHtml from "gulp-format-html";
 
 import less from "gulp-less";
 import plumber from "gulp-plumber";
@@ -52,13 +53,12 @@ function includeHtml() {
   return gulp
     .src("src/html/*.html")
     .pipe(plumber())
-    .pipe(
-      include({
-        prefix: "@@",
-        basepath: "@file"
-      })
-    )
-    .pipe(formatHTML())
+    .pipe(includeFile({
+      prefix: "@@",
+      basepath: "@file"
+    }))
+    .pipe(includeHtmlTag())
+    .pipe(formatHtml())
     .pipe(gulp.dest("dist"));
 }
 
@@ -86,7 +86,7 @@ function js() {
     .src("src/scripts/dev/*.js")
     .pipe(plumber())
     .pipe(
-      include({
+      includeFile({
         prefix: "//@@",
         basepath: "@file"
       })
@@ -101,14 +101,14 @@ function js() {
     .pipe(gulp.dest("dist/scripts"));
 }
 
-function jsCopy(){
+function jsCopy() {
   return gulp
     .src(resources.jsVendor)
     .pipe(plumber())
     .pipe(gulp.dest("dist/scripts"));
 }
 
-function copy(){
+function copy() {
   return gulp
     .src(resources.static, {
       base: "src"
@@ -116,7 +116,7 @@ function copy(){
     .pipe(gulp.dest("dist/"));
 }
 
-function images(){
+function images() {
   return gulp
     .src(resources.images)
     .pipe(
@@ -129,7 +129,7 @@ function images(){
     .pipe(gulp.dest("dist/assets/images"));
 }
 
-function svgSprite(){
+function svgSprite() {
   return gulp
     .src(resources.svgSprite)
     .pipe(
@@ -164,7 +164,7 @@ function reloadServer(done) {
   done();
 }
 
-function serve(){
+function serve() {
   server.init({
     server: "dist"
   });
