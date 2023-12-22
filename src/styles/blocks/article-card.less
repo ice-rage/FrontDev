@@ -1,7 +1,27 @@
 .article-card {
+  position: relative;
   box-sizing: border-box;
   display: flex;
   width: 100%;
+
+  & + .article-card {
+    margin-top: 120px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      margin: 0 auto 60px;
+      left: 0;
+      right: 0;
+      bottom: 100%;
+      width: 100%;
+      max-width: 1257px;
+      height: 1px;
+      background-color: @black;
+      pointer-events: none;
+    }
+  }
 
   &:hover {
     @media(hover: hover) {
@@ -97,11 +117,6 @@
     font-size: 24px;
   }
 
-  &__description {
-    margin: 0;
-    font-size: 16px;
-  }
-
   &__arrow {
     position: absolute;
     right: 0;
@@ -110,22 +125,8 @@
     transition: none;
   }
 
-  & + .article-card {
-    margin-top: 120px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      margin: 0 auto 60px;
-      left: 0;
-      right: 0;
-      bottom: 100%;
-      width: 100%;
-      max-width: 1257px;
-      height: 1px;
-      background-color: @black;
-      pointer-events: none;
-    }
+  &__description {
+    margin: 0;
+    font-size: 16px;
   }
 }

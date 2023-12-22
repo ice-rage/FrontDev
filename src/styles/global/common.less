@@ -13,7 +13,7 @@
   background-image: url("../assets/images/bg.png"), url("../assets/images/noise.png");
   background-position: 0 0, 0, 0;
   background-size: auto, 100% auto;
-  background-repeat: repeat, repeat-y;
+  background-repeat: repeat;
   color: @black;
   font-family: @font1;
   font-size: 16px;
@@ -38,10 +38,10 @@ img {
   object-fit: cover;
 }
 
-button,
 input,
 textarea,
-select {
+select,
+button {
   box-shadow: none;
   outline: none;
 }
@@ -69,4 +69,8 @@ textarea:focus {
     color: transparent;
     transition: color 0.2s;
   }
+}
+
+button {
+  cursor: pointer;
 }

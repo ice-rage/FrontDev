@@ -9,12 +9,14 @@
     width: 100%;
     color: @black;
     text-decoration: none;
-  }
 
-  &__link:hover &__title {
-    @media(hover: hover) {
-      color: @red_BC;
-      text-decoration-color: @red_BC;
+    &:hover {
+      @media(hover: hover) {
+        .event-card__title {
+          color: @red_BC;
+          text-decoration-color: @red_BC;
+        }
+      }
     }
   }
   

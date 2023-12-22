@@ -11,8 +11,15 @@
     width: 100%;
     margin-bottom: 64px;
     padding: 120px 0 84px;
-    background-image: url("../assets/images/home-events.png");
-    background-size: clamp(320px, 100%, 1920px) 100%;
+    background-color: @white;
+
+    @supports(background-size: clamp(320px, 100%, 1920px) 100%)
+    {
+      background-color: transparent;
+      background-image: url("../assets/images/home-events.png");
+      background-size: clamp(320px, 100%, 1920px) 100%;
+      background-repeat: no-repeat;
+    }
 
     & .events__listing {
       margin-top: 0;

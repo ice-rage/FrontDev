@@ -7,10 +7,9 @@
     "order legend";
   width: 100%;
 
-  &__section-title {
-    color: @black;
-    font-weight: 700;
-    font-size: 18px;
+  & > div {
+    box-sizing: border-box;
+    text-align: center;
   }
 
   &__checks {
@@ -19,6 +18,12 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+
+  &__section-title {
+    color: @black;
+    font-weight: 700;
+    font-size: 18px;
   }
 
   &__check {
@@ -178,6 +183,12 @@
     margin-top: 20px;
   }
 
+  &__note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   &__mark-container {
     position: relative;
     display: flex;
@@ -208,19 +219,8 @@
     }
   }
 
-  &__note {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
   &__designation {
     font-size: 14px;
     text-transform: lowercase;
-  }
-
-  & > div {
-    box-sizing: border-box;
-    text-align: center;
   }
 }
