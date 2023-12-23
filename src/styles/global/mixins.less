@@ -31,3 +31,31 @@
     display: flex;
   }
 }
+
+.width_624 {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 624px;
+}
+
+.picture(@w: 100%; @after-pt) {
+  position: relative;
+  display: block;
+  width: @w;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-top: @after-pt;
+  }
+}
+
+.img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

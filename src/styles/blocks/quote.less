@@ -1,11 +1,14 @@
 .quote {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  position: relative;
   font-family: @font3;
   font-weight: 700;
   font-size: 128px;
   line-height: 1.2;
   white-space: nowrap;
   overflow: hidden;
+
+  &__content {
+    text-align: right;
+    margin: 0 -189px 0 -52px;
+  }
 }
