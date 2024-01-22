@@ -1,21 +1,33 @@
 .event {
-  padding: 38px 40px 150px;
+  padding: 38px 40px 90px;
+
+  &__title {
+    padding-left: 22px;
+  }
 
   &__main-info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     max-width: 943px;
-    margin: 80px auto;
+    margin: 80px auto 0;
   }
 
   &__info-block {
     display: flex;
     flex-direction: column;
     gap: 11px;
+    margin: 223px 0 217px 0;
+
+    .decoration {
+      max-width: 160px;
+    }
 
     &--left {
-      text-align: right;
+      align-items: flex-end;
+
+      .decoration {
+        max-width: 139px;
+      }
     }
   }
 
@@ -25,6 +37,7 @@
 
   &__label {
     font-family: @font3;
+    line-height: 1.2;
     text-transform: uppercase;
 
     &--f30 {
@@ -50,14 +63,17 @@
     display: flex;
     align-items: flex-end;
     gap: 12px;
+
+    :last-child {
+      margin-bottom: 4px;
+    }
   }
 
-  &__program {
-    margin-bottom: 75px;
+  &__container {
+    .container();
   }
 
-  &__tracklist {
-    margin-top: 50px;
-    margin-bottom: 80px;
+  &__content {
+    margin: 80px 0;
   }
 }
