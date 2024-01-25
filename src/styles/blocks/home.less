@@ -11,19 +11,26 @@
 
   &__events-listing {
     width: 100%;
+    max-height: 1236px;
     margin-bottom: 64px;
     padding: 120px 0 84px;
-    background-color: @white;
+    background-image: url("../assets/images/home-events.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 
-    @supports(background-size: clamp(320px, 100%, 1920px) 100%)
-    {
-      background-color: transparent;
-      background-image: url("../assets/images/home-events.png");
-      background-size: clamp(320px, 100%, 1920px) 100%;
-      background-repeat: no-repeat;
+    @media @bw1660 {
+      padding: 100px 0 77px;
     }
 
-    & .events__listing {
+    @media @bw1340{
+      padding: 80px 0 43px;
+    }
+
+    @media @bw768 {
+      padding: 40px 0;
+    }
+
+    .events__listing {
       margin-top: 0;
     }
   }

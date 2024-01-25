@@ -1,15 +1,35 @@
 .slider {
   display: flex;
-  justify-content: space-between;
-  width: 39.355%;
-  max-width: 525px;
-  max-height: 60px;
+  gap: 122px;
+  width: 525px;
+  height: 60px;
+
+  @media @bw1660 {
+    gap: 96px;
+    width: 474px;
+  }
+
+  @media @bw960 {
+    gap: 52px;
+    width: 42.373%;
+    height: 40px;
+  }
+
+  @media @bw768 {
+    gap: 42px;
+    width: 100%;
+    max-width: 300px;
+  }
 
   &__items {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 6px;
+
+    @media @bw1340 {
+      gap: 4px;
+    }
   }
 
   &__item {
@@ -19,6 +39,10 @@
     border: none;
     border-radius: 2px;
     background-color: @gray_BF;
+
+    @media @bw960 {
+      width: 9px;
+    }
 
     &--active {
       background-color: @black;
