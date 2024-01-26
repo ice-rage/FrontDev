@@ -1,11 +1,34 @@
 .reserve {
   display: grid;
-  gap: 67px 11%;
-  grid-template-columns: 405px calc(89% - 405px);
+  gap: 67px 11.2%;
+  grid-template-columns: 405px calc(88.8% - 405px);
   grid-template-areas: 
     "checks scheme"
     "order legend";
   width: 100%;
+
+  @media @bw1660{
+    gap: 67px 6.27%;
+    grid-template-columns: 401px calc(93.73% - 401px);
+  }
+
+  @media @bw1020 {
+    gap: 68px;
+    grid-template-columns: auto 388px;
+    grid-template-areas: 
+      "scheme scheme"
+      "checks legend"
+      "checks order";
+  }
+
+  @media @bw768 {
+    grid-template-columns: 100%;
+    grid-template-areas: 
+      "scheme"
+      "legend"
+      "checks"
+      "order";
+  }
 
   & > div {
     box-sizing: border-box;
@@ -34,6 +57,14 @@
 
   &__scheme {
     grid-area: scheme;
+
+    @media @bw1020 {
+      padding: 0 40px;
+    }
+
+    @media @bw768 {
+      padding: 0;
+    }
   }
 
   &__scheme-container {

@@ -164,7 +164,7 @@ function reloadServer(done) {
   done();
 }
 
-function serve(done) {
+function serve() {
   server.init({
     server: "dist"
   });
@@ -175,7 +175,6 @@ function serve(done) {
   gulp.watch(resources.static, { delay: 500 }, gulp.series(copy, reloadServer));
   gulp.watch(resources.images, { delay: 500 }, gulp.series(images, reloadServer));
   gulp.watch(resources.svgSprite, gulp.series(svgSprite, reloadServer));
-  done();
 }
 
 const start = gulp.series(build, serve);
