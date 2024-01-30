@@ -19,7 +19,7 @@
 
     @media @bw1020 {
       justify-content: center;
-      margin: 0 -15px -80px;
+      margin-bottom: -80px;
     }
 
     @media @bw768 {
@@ -32,71 +32,53 @@
 
     &--nowrap {
       flex-wrap: nowrap;
-      margin: 0 -30px;
+      margin-bottom: 0;
 
-      @media @bw1660 {
-        margin: 0 -20px;
-      }
-  
-      @media @bw1340 {
-        margin: 0 -15px;
+      @media @r650_1660 {
+        margin-bottom: 0;
       }
 
       @media @bw1020 {
         justify-content: flex-start;
-        margin: 0 -15px;
-      }
-
-      @media @bw768 {
-        margin: 0 -10px;
       }
 
       @media @bw650 {
-        margin: 0 -10px 0;
+        margin: 0 -10px;
       }
-
+  
       .listing__event-card {
         display: none;
         min-width: calc(33.333% - 60px);
-        margin: 0 30px;
+        margin-bottom: 0;
 
-        @media @bw1660 {
-          margin: 0 20px;
+        &:nth-child(-n+3) {
+          display: initial;
         }
 
-        @media @bw1340 {
-          margin: 0 15px;
+        @media @r650_1660 {
+          margin-bottom: 0;
         }
 
         @media @bw1020 {
           min-width: 280px;
         }
 
-        @media @bw768 {
+        @media @bw650 {
           margin: 0 10px;
         }
+      }
 
-        @media @bw650 {
-          margin: 0 10px 0;
+      .event-card__title {
+        @media @bw1020 {
+          min-height: 50px;
+          font-size: 16px;
         }
+      }
 
-        &:nth-child(-n+3) {
-          display: initial;
-        }
-
-        .event-card__title {
-          @media @bw1340 {
-            min-height: 50px;
-            margin: 0 0 10px;
-            font-weight: 700;
-            font-size: 16px;
-          }
-        }
-
-        .event-card__description {
-          @media @bw1340 {
-            font-size: 14px;
-          }
+      .event-card__description {
+        @media @bw1020 {
+          min-height: 76px;
+          font-size: 14px;
         }
       }
     }

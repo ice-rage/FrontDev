@@ -61,22 +61,26 @@
     @media @bw1340 {
       min-height: 54px;
       margin: 0 0 10px;
-      font-weight: 600;
       font-size: 20px;
     }
 
-    @media @bw768 {
+    @media @bw650 {
       min-height: 50px;
-      font-weight: 700;
       font-size: 16px;
     }
   }
   
   &__description {
+    min-height: 66px;
     margin: 0 0 auto;
     font-size: 16px;
 
-    @media @bw768 {
+    @media @bw1340 {
+      min-height: 92px;
+    }
+
+    @media @bw650 {
+      min-height: 76px;
       font-size: 14px;
     }
   }
