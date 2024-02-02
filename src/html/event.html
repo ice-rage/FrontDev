@@ -32,7 +32,23 @@
             </div>
   
             <picture class="event__picture">
-              <img src="assets/images/event/main.jpg" alt="sade" class="event__img">
+              <source 
+                media="(max-width: 1169px)" 
+                type="image/webp" 
+                srcset="assets/images/event/main_245w.webp">
+      
+              <source media="(max-width: 1169px)" srcset="assets/images/event/main_245w.jpg">
+
+              <source 
+                media="(max-width: 1659px)" 
+                type="image/webp" 
+                srcset="assets/images/event/main_426w.webp">
+      
+              <source media="(max-width: 1659px)" srcset="assets/images/event/main_426w.jpg">
+      
+              <source type="image/webp" srcset="assets/images/event/main_497w.webp">
+
+              <img src="assets/images/event/main_497w.jpg" alt="sade" class="event__img">
             </picture>
               
             <div class="event__info-block">

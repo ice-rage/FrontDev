@@ -13,6 +13,22 @@
     font-size: 44px;
     word-wrap: break-word;
 
+    @media @bw1100 {
+      font-size: 34px;
+    }
+
+    @media @bw920 {
+      font-size: 30px;
+    }
+
+    @media @bw800 {
+      font-size: 26px;
+    }
+
+    @media @bw720 {
+      font-size: 18px;
+    }
+
     &--w868 {
       width: 100%;
       max-width: 868px;
@@ -22,29 +38,89 @@
   &__text {
     align-self: flex-end;
     width: 100%;
-    max-width: 870px;
     font-size: 18px;
+
+    @media @bw800 {
+      font-size: 16px;
+    }
 
     &--mt50 {
       margin-top: 50px;
+      max-width: 64.993%;
+
+      @media @bw1660 {
+        max-width: 827px;
+      }
+
+      @media @bw1340 {
+        max-width: 89.972%;
+        margin-top: 30px;
+      }
+
+      @media @bw720 {
+        max-width: 100%;
+      }
     }
 
     &--mb90 {
       margin-bottom: 90px;
+
+      @media @bw1660 {
+        margin-bottom: 88px;
+      }
+
+      @media @bw1020 {
+        width: 39.548%;
+      }
+
+      @media @bw768 {
+        margin-bottom: 30px;
+      }
     }
   }
 
   &__second-block {
     display: grid;
-    grid-template-columns: auto auto 404px;
+    grid-template-columns: 467px auto 60px 30.285%;
     grid-template-rows: auto auto 100px auto 50px auto;
-    grid-column-gap: 60px;
     margin: 100px 0 110px 0;
+
+    @media @bw1660 {
+      grid-template-columns: 433px auto 39px 31.19%;
+      grid-template-rows: auto auto 100px auto 94px auto;
+      margin-bottom: 87px;
+    }
+
+    @media @bw1340 {
+      margin: 80px 0 52px 0;
+    }
+
+    @media @bw1100 {
+      grid-template-columns: 10% auto 39px 31.19%;
+      grid-template-rows: auto auto 52px auto 52px auto;
+    }
+
+    @media @bw800 {
+      grid-template-columns: auto 27px 37%;
+      grid-template-rows: auto 52px 28px auto 41px auto;
+    }
+
+    @media @bw720 {
+      grid-template-columns: auto;
+      grid-template-rows: auto 60px auto 32px auto 50px auto;
+      column-gap: 0;
+      margin: 60px 0 50px 0;
+    }
   }
 
   &__first-picture-area {
     grid-row: 1 / span 2;
     grid-column: 1 / span 2;
+
+    @media @bw800 {
+      grid-row: 1;
+      grid-column: 1 / span 3;
+    }
   }
 
   &__first-picture {
@@ -57,8 +133,27 @@
   
   &__second-picture-area {
     grid-row: 2 / span 3;
-    grid-column-start: 3;
+    grid-column-start: 4;
     padding-bottom: 16px;
+
+    @media @bw1660 {
+      padding-bottom: 14px;
+    }
+
+    @media @bw1340 {
+      padding-bottom: 0;
+    }
+
+    @media @bw800 {
+      grid-row: 3 / span 5;
+      grid-column-start: 3;
+    }
+
+    @media @bw720 {
+      grid-row: 7;
+      grid-column: 1;
+      padding-left: 31.071%;
+    }
   }
 
   &__second-picture {
@@ -68,26 +163,57 @@
   &__title-area {
     grid-row-start: 4;
     grid-column: 1 / span 2;
+
+    @media @bw800 {
+      grid-column: 1;
+    }
+
+    @media @bw720 {
+      grid-row: 3;
+    }
   }
 
   &__text-area {
     grid-row-start: 6;
-    grid-column: 2 / span 2;
+    grid-column: 2 / span 3;
+
+    @media @bw800 {
+      grid-column: 1;
+      padding-left: 70px;
+    }
+
+    @media @bw1100 {
+      grid-column: 2 / span 3;
+    }
+
+    @media @bw720 {
+      grid-row: 5;
+      padding: 0;
+    }
   }
 
   &__third-block {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    gap: 60px;
+
+    @media @bw1020 {
+      flex-direction: column;
+      gap: 80px;
+    }
   }
 
   &__third-picture {
     .picture(@after-pt: 40.86%);
 
-    box-sizing: border-box;
-    max-width: 930px;
-    padding: 19px 9px 0 49px;
+    width: 69.715%;
+
+    @media @bw1660 {
+      width: 68.81%;
+    }
+
+    @media @bw1020 {
+      width: 100%;
+    }
 
     &::before {
       content: "";
@@ -102,15 +228,37 @@
 
   &__third-img {
     position: absolute;
-    top: 18px;
+    display: block;
+    top: 19px;
     left: 49px;
-    right: 9px;
-    bottom: 0;
     width: calc(100% - 58px);
+
+    @media @bw1660 {
+      top: 18px;
+      left: 38px;
+      width: calc(100% - 46px);
+    }
   }
 
   &__third-block-wrapper {
-    width: 100%;
-    max-width: 344px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 25.787%;
+
+    @media @bw1660 {
+      width: 28.016%;
+    }
+
+    @media @bw1020 {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    @media @bw768 {
+      flex-direction: column;
+      justify-content: initial;
+    }
   }
 }

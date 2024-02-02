@@ -21,15 +21,12 @@
         
           @@include('blocks/events-list.html', { "class": "listing__events-list" })
 
-          <div class="events__arrow-link arrow-link arrow-link--vertical">
-            <a href="#" class="arrow-link__link link">Показать еще</a>
-            
-            <a href="#" class="arrow-link__arrow arrow">
-              <svg class="arrow__icon" width="91" height="91">
-                <use xlink:href="assets/icons/symbols.svg#arrow"></use>
-              </svg>
-            </a>
-          </div>
+          @@include('blocks/arrow-link.html', 
+          { 
+            "class": "events__arrow-link",
+            "modifier": "arrow-link--vertical",
+            "title": "Показать еще" 
+          })
         </section>
 
         <section class="events__additional-services additional-services">
