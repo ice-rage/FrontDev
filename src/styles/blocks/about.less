@@ -17,11 +17,7 @@
       font-size: 34px;
     }
 
-    @media @bw920 {
-      font-size: 30px;
-    }
-
-    @media @bw800 {
+    @media @bw960 {
       font-size: 26px;
     }
 
@@ -40,16 +36,16 @@
     width: 100%;
     font-size: 18px;
 
-    @media @bw800 {
+    @media @bw960 {
       font-size: 16px;
     }
 
     &--mt50 {
       margin-top: 50px;
-      max-width: 64.993%;
+      max-width: 867px;
 
       @media @bw1660 {
-        max-width: 827px;
+       max-width: 65.635%;
       }
 
       @media @bw1340 {
@@ -69,46 +65,46 @@
         margin-bottom: 88px;
       }
 
-      @media @bw1020 {
+      @media @bw960 {
+        //width: 280px;
         width: 39.548%;
       }
 
       @media @bw768 {
         margin-bottom: 30px;
       }
+
+      @media @bw650 {
+        width: 100%;
+      }
     }
   }
 
   &__second-block {
     display: grid;
-    grid-template-columns: 467px auto 60px 30.285%;
+    grid-template-columns: 35% 30.217% auto 30.285%;
     grid-template-rows: auto auto 100px auto 50px auto;
     margin: 100px 0 110px 0;
 
     @media @bw1660 {
-      grid-template-columns: 433px auto 39px 31.19%;
+      grid-template-columns: 34.365% 31.349% auto 31.19%;
       grid-template-rows: auto auto 100px auto 94px auto;
       margin-bottom: 87px;
     }
 
     @media @bw1340 {
+      grid-template-columns: 10% 55.707% auto 31.19%;
       margin: 80px 0 52px 0;
     }
 
-    @media @bw1100 {
-      grid-template-columns: 10% auto 39px 31.19%;
-      grid-template-rows: auto auto 52px auto 52px auto;
-    }
-
-    @media @bw800 {
-      grid-template-columns: auto 27px 37%;
-      grid-template-rows: auto 52px 28px auto 41px auto;
+    @media @bw960 {
+      grid-template-columns: 59.182% auto 37%;
+      grid-template-rows: auto 52px 28px auto 41px auto 28px;
     }
 
     @media @bw720 {
-      grid-template-columns: auto;
-      grid-template-rows: auto 60px auto 32px auto 50px auto;
-      column-gap: 0;
+      grid-template-columns: auto 68.929%;
+      grid-template-rows: auto 60px auto 30px auto 50px auto;
       margin: 60px 0 50px 0;
     }
   }
@@ -117,9 +113,13 @@
     grid-row: 1 / span 2;
     grid-column: 1 / span 2;
 
-    @media @bw800 {
+    @media @bw960 {
       grid-row: 1;
       grid-column: 1 / span 3;
+    }
+
+    @media @bw720 {
+      grid-column: 1 / span 2;
     }
   }
 
@@ -144,15 +144,14 @@
       padding-bottom: 0;
     }
 
-    @media @bw800 {
+    @media @bw960 {
       grid-row: 3 / span 5;
       grid-column-start: 3;
     }
 
     @media @bw720 {
       grid-row: 7;
-      grid-column: 1;
-      padding-left: 31.071%;
+      grid-column: 2;
     }
   }
 
@@ -164,12 +163,13 @@
     grid-row-start: 4;
     grid-column: 1 / span 2;
 
-    @media @bw800 {
+    @media @bw960 {
       grid-column: 1;
     }
 
     @media @bw720 {
       grid-row: 3;
+      grid-column: 1 / span 2;
     }
   }
 
@@ -177,17 +177,14 @@
     grid-row-start: 6;
     grid-column: 2 / span 3;
 
-    @media @bw800 {
+    @media @bw960 {
       grid-column: 1;
       padding-left: 70px;
     }
 
-    @media @bw1100 {
-      grid-column: 2 / span 3;
-    }
-
     @media @bw720 {
       grid-row: 5;
+      grid-column: 1 / span 2;
       padding: 0;
     }
   }
@@ -196,9 +193,13 @@
     display: flex;
     justify-content: space-between;
 
-    @media @bw1020 {
+    @media @bw960 {
       flex-direction: column;
       gap: 80px;
+    }
+
+    @media @bw768 {
+      gap: 60px;
     }
   }
 
@@ -211,7 +212,7 @@
       width: 68.81%;
     }
 
-    @media @bw1020 {
+    @media @bw960 {
       width: 100%;
     }
 
@@ -238,27 +239,55 @@
       left: 38px;
       width: calc(100% - 46px);
     }
+
+    @media @bw960 {
+      top: 14px;
+      left: 29px;
+      width: calc(100% - 36px);
+    }
+
+    @media @bw650 {
+      top: 5px;
+      left: 11px;
+      width: calc(100% - 13px);
+    }
   }
 
   &__third-block-wrapper {
     display: flex;
     flex-direction: column;
-    align-self: flex-end;
+    justify-content: flex-end;
     width: 25.787%;
 
     @media @bw1660 {
       width: 28.016%;
     }
 
-    @media @bw1020 {
+    @media @bw960 {
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
     }
 
-    @media @bw768 {
+    @media @bw650 {
       flex-direction: column;
-      justify-content: initial;
+      align-items: flex-end;
+    }
+  }
+
+  &__arrow-link {
+    @media @bw960 {
+      width: 37%;
+    }
+
+    @media @bw650 {
+      width: 280px;
+    }
+
+    .arrow-link__link {
+      @media @bw650 {
+        font-size: 14px;
+      }
     }
   }
 }
