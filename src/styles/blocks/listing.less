@@ -8,6 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -30px -120px;
+    overflow-x: scroll;
 
     @media @bw1660 {
       margin: 0 -20px -100px;
@@ -28,59 +29,6 @@
 
     @media @bw650 {
       margin: 0 0 -60px;
-    }
-
-    &--nowrap {
-      flex-wrap: nowrap;
-      margin-bottom: 0;
-
-      @media @r650_1660 {
-        margin-bottom: 0;
-      }
-
-      @media @bw1020 {
-        justify-content: flex-start;
-      }
-
-      @media @bw650 {
-        margin: 0 -10px;
-      }
-  
-      .listing__event-card {
-        display: none;
-        min-width: calc(33.333% - 60px);
-        margin-bottom: 0;
-
-        &:nth-child(-n+3) {
-          display: initial;
-        }
-
-        @media @r650_1660 {
-          margin-bottom: 0;
-        }
-
-        @media @bw1020 {
-          min-width: 280px;
-        }
-
-        @media @bw650 {
-          margin: 0 10px;
-        }
-      }
-
-      .event-card__title {
-        @media @bw1020 {
-          min-height: 50px;
-          font-size: 16px;
-        }
-      }
-
-      .event-card__description {
-        @media @bw1020 {
-          min-height: 76px;
-          font-size: 14px;
-        }
-      }
     }
   }
 
@@ -111,15 +59,6 @@
     @media @bw650 {
       width: 100%;
       margin: 0 0 60px;
-    }
-  }
-
-  &__slider {
-    align-self: center;
-    margin-top: 70px;
-   
-    @media @bw768 {
-      margin-top: 60px;
     }
   }
 

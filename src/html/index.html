@@ -21,17 +21,7 @@
 
         @@include('blocks/about.html', { "class": "home__about" })
 
-        <div class="home__events-listing">
-          <section class="listing events__listing">
-            <h2 class="listing__title section-title">Мероприятия</h2>
-          
-            @@include('blocks/events-list.html', { class: "listing__events-list--nowrap" })
-          
-            @@include('blocks/slider.html', { "class": "listing__slider" })
-          
-            <a href="#" class="listing__link link">Смотреть все</a>
-          </section>
-        </div>
+        @@include('blocks/upcoming.html', { class: "home__upcoming" });
 
         @@include('blocks/blog-listing.html', { "class": "home__blog-listing" })
 
@@ -48,5 +38,8 @@
     @@include('blocks/page-footer.html')
 
     @@include('blocks/event-pp.html')
+
+    <script src="scripts/swiper.min.js"></script>
+    <script src="scripts/main.min.js"></script>
   </body>
 </html>

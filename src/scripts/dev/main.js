@@ -1,6 +1,7 @@
 (function () {
   "use strict";
 
+  /* Переключение навигации */
   const root = document.documentElement;
 
   const navToggle = document.querySelector("#js-navToggle");
@@ -9,7 +10,7 @@
     root.classList.toggle("show-nav");
   });
   
-
+  /* Открытие/закрытие формы мероприятия */
   const eventPP = document.querySelector("#js-eventPP");
   const eventOpenBtn = document.querySelector("#js-openEventBtn");
 
@@ -43,23 +44,27 @@
       eventPP.addEventListener("click", closeEventPP);
     });
 
-    // eventOpenBtn.addEventListener("click", function() {
-    //    root.classList.add("show-event-popup");
-    // });
+    /* Анимация слайдеров */
+    const swipers = document.querySelectorAll(".js-swiper");
 
-    // eventPP.addEventListener("click", function(event) {
-    //   if (event.target === this ||
-    //     event.target.classList.contains("js-ppCloseBtn")
-    //   ) {
-    //     root.classList.remove("show-event-popup");
-    //   }
-    // });
-
-    // document.addEventListener("keyup", function(event) {
-    //   if (event.key === "Escape" || event.keyCode === 27) {
-    //     console.log(event);
-    //     root.classList.remove("show-event-popup");
-    //   }
-    // });
+    swipers.forEach(function(swiper) {
+      new Swiper(swiper, {
+        updateOnWindowResize: true,
+        slidesPerView: "auto",
+        freeMode: true,
+        spaceBetween: 0,
+        speed: 500,
+        grabCursor: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-arrow-next",
+          prevEl: ".swiper-arrow-prev",
+          disabledClass: "arrow--disabled"
+        }
+      })
+    });
   }
 })();
