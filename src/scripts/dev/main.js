@@ -66,5 +66,19 @@
         }
       })
     });
+
+    /* Проверка загрузки фонового изображения для листинга событий на главной странице */
+    const upcomingWrapper = document.querySelector("#js-upcoming-wrapper");
+
+    const img = new Image();
+
+    const bgImage = getComputedStyle(upcomingWrapper).backgroundImage;
+
+    const url = bgImage.slice(4, -1).replace(/"/g, "");
+    img.src = url;
+
+    img.addEventListener("error", function() {
+      upcomingWrapper.setAttribute("style", "background-color: white");
+    });
   }
 })();
