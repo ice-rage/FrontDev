@@ -6972,11 +6972,52 @@
     }
   }
 
+  /* Кастомизируем селект для выбора кол-ва посетителей мероприятия */
   const jsSelectric = $(".js-selectric");
 
   if (jsSelectric.length) {
     jsSelectric.selectric({
-      nativeOnMobile: false
+      nativeOnMobile: false,
     });
+  }
+
+  /* Задаем маску полю для ввода номера телефона */
+  const mobileMask = $(".js-mobileMask");
+
+  if (mobileMask.length) {
+    mobileMask.mask("+7 (000) 000 00 00", {
+      placeholder: "+7 (___) ___ __ __",
+    });
+  }
+
+  /* Инициализируем календарь для выбора даты проведения мероприятия */
+  const dateField = $(".js-dateField");
+
+  if (dateField.length) {
+    const initDatePicker = function (datePicker) {
+      const dateInput = datePicker.find(".js-dateInput");
+      const dateDay = datePicker.find(".js-dateDay");
+      const dateMonth = datePicker.find(".js-dateMonth");
+      const dateYear = datePicker.find(".js-dateYear");
+
+      const dateConfig = {
+        autoClose: true,
+        minDate: new Date(),
+        navTitles: {
+          days: "MMMM <i>yyyy</i>"
+        },
+        onSelect: function ({ date }) {
+          dateDay.val(date ? ("0" + date.getDate()).slice(-2) : "");
+          dateMonth.val(date ? ("0" + (date.getMonth() + 1)).slice(-2) : "");
+          dateYear.val(date ? date.getFullYear() : "");
+        }
+      };
+
+      new AirDatepicker(dateInput[0], dateConfig);
+    };
+
+    $.each(dateField, function () {
+      initDatePicker($(this));
+    })
   }
 })();
