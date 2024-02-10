@@ -131,45 +131,46 @@ import mapDarkTheme from "../json/map-dark-theme.json" assert { type: "json" }
       infoMap.addChild(new YMapDefaultFeaturesLayer({}));
 
       // Создаем метку (маркер + логотип)
-      const point = document.createElement("div");
-      point.className = "info-map__content";
+      const placemark = document.createElement("div");
+      placemark.className = "info-map__placemark";
 
       // Создаем маркер
-      const pointMarker = document.createElement("img");
-      pointMarker.className = "info-map__marker";
-      pointMarker.src = "assets/images/location.png";
+      const marker = document.createElement("img");
+      marker.className = "info-map__marker";
+      marker.src = "assets/images/location.png";
 
       // Вкладываем маркер внутрь метки
-      point.appendChild(pointMarker);
+      placemark.appendChild(marker);
 
       // Создаем логотип как SVG-элемент
-      const pointLogoSvg = document.createElementNS(
+      const logoSvg = document.createElementNS(
         "http://www.w3.org/2000/svg",
         "svg"
       );
-      pointLogoSvg.setAttribute("width", "78px");
-      pointLogoSvg.setAttribute("height", "57px");
-      pointLogoSvg.setAttribute("class", "info-map__marker-icon");
 
-      const pointLogoUse = document.createElementNS(
+      logoSvg.setAttribute("width", "78px");
+      logoSvg.setAttribute("height", "57px");
+      logoSvg.setAttribute("class", "info-map__marker-icon");
+
+      const logoUse = document.createElementNS(
         "http://www.w3.org/2000/svg",
         "use"
       );
 
-      pointLogoUse.setAttributeNS(
+      logoUse.setAttributeNS(
         "http://www.w3.org/1999/xlink",
         "xlink:href",
         "assets/icons/symbols.svg#logo"
       );
 
-      pointLogoSvg.appendChild(pointLogoUse);
+      logoSvg.appendChild(logoUse);
 
       // Вкладываем логотип также внутрь метки
-      point.appendChild(pointLogoSvg);
+      placemark.appendChild(logoSvg);
 
-      // Добавляем маркер на карту
+      // Добавляем метку на карту
       infoMap.addChild(
-        new YMapMarker({ coordinates: [84.96274, 56.49385] }, point)
+        new YMapMarker({ coordinates: [84.96274, 56.49385] }, placemark)
       );
     }
   }
@@ -179,7 +180,7 @@ import mapDarkTheme from "../json/map-dark-theme.json" assert { type: "json" }
 
   if (jsSelectric.length) {
     jsSelectric.selectric({
-      nativeOnMobile: false,
+      nativeOnMobile: false
     });
   }
 

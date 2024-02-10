@@ -1,8 +1,17 @@
 .info-map {
   display: block;
-  width: 752px;
+  width: 100%;
+  max-width: 752px;
+
+  &__wrapper {
+    .responsive-height(@after-pt: 65.559%);
+  }
 
   &__content {
+    .responsive-content();
+  }
+
+  &__placemark {
     display: flex;
     align-items: flex-end;
   }

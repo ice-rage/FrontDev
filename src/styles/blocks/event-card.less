@@ -21,27 +21,27 @@
   }
   
   &__picture {
-    .picture(@after-pt: 107.16%);
+    .responsive-height(@after-pt: 107.16%);
 
     margin: 0 0 25px;
     font-size: 0;
     overflow: hidden;
 
     @media @bw1660 {
-      .picture(@after-pt: 110.43%);
+      .responsive-height(@after-pt: 110.43%);
 
       margin: 0 0 20px;
     }
 
     @media @bw1340 {
-      .picture(@after-pt: 107.16%);
+      .responsive-height(@after-pt: 107.16%);
 
       margin: 0 0 25px;
     }
   }
   
   &__img {
-    .img();
+    .responsive-content();
   }
   
   &__title {

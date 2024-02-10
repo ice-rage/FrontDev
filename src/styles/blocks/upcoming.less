@@ -24,11 +24,19 @@
 
     display: flex;
     flex-direction: column;
+
+    @media @bw1020 {
+      padding-right: 0;
+    }
   }
 
   &__link {
     align-self: flex-end;
     padding: 15px 0 15px 40px;
+
+    @media @bw1340 {
+      margin-right: 30px;
+    }
 
     @media @bw768 {
       padding-left: 20px;
