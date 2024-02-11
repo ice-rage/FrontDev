@@ -1,7 +1,15 @@
 .subscription-form {
   &__title {
-    margin: 0 0 13px 7px;
+    margin: 0 0 14px 6px;
     font-weight: 600;
+
+    @media @bw1660 {
+      margin-left: -16px;
+    }
+
+    @media @bw1340 {
+      margin-left: 0;
+    }
   }
 
   &__wrapper {
