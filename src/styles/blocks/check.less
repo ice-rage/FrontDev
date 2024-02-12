@@ -4,9 +4,8 @@
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   min-height: 24px;
-  padding-top: 2px;
   padding-left: 24px;
   color: @black;
   cursor: pointer;
@@ -55,6 +54,11 @@
 
     &--fw300{
       font-weight: 300;
+
+      @media @bw768 {
+        font-weight: 400;
+        font-size: 12px;
+      }
     }
   }
 
