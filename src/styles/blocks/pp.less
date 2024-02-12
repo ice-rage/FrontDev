@@ -17,6 +17,14 @@
     backdrop-filter: blur(25px);
   }
 
+  @media @bw1340 {
+    padding: 72px 40px 50px;
+  }
+
+  @media @bw768 {
+    padding: 80px 20px 50px;
+  }
+
   &__wrapper {
     position: relative;
     box-sizing: border-box;
@@ -30,6 +38,14 @@
     background-position: 0, 0;
     background-size: auto;
     background-repeat: repeat;
+
+    @media @bw1660 {
+      max-width: 1144px;
+    }
+
+    @media @bw1340 {
+      max-width: 89.5833vw;
+    }
   }
 
   &__sticky-close {
@@ -42,8 +58,28 @@
 
   &__x-btn {
     position: absolute;
+    width: 60px;
+    height: 60px;
     top: -30px;
     right: -30px;
+
+    @media @bw1340 {
+      right: -2px;
+    }
+
+    @media @bw768 {
+      width: 36px;
+      height: 36px;
+      top: -18px;
+      right: -18px;
+    }
+
+    .x-btn__icon {
+      @media @bw768 {
+        width: 21px;
+        height: 21px;
+      }
+    }
   }
 
   &__container {
@@ -52,6 +88,10 @@
     max-width: 950px;
     margin: 0 auto;
     padding: 0 40px 40px;
+
+    @media @bw768 {
+      padding: 0 20px 40px;
+    }
   }
 
   &__title {
@@ -69,6 +109,25 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
     z-index: 1;
+
+    @media @bw1660 {
+      margin-left: -52px;
+    }
+
+    @media @bw1340 {
+      max-width: 495px;
+      margin-left: -27px;
+      padding: 10px 60px 10px 18px;
+    }
+
+    @media @bw768 {
+      max-width: 225px;
+      min-height: 77px;
+      margin: -30px 0 40px -6px;
+      padding: 9px 22px 11px 20px;
+      font-size: 14px;
+      line-height: 1.357;
+    }
   }
 
   &__form {

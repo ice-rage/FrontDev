@@ -11,6 +11,10 @@
     }
   }
 
+  &__radio {
+    gap: 15px;
+  }
+
   &__select-wrapper {
     position: relative;
 
@@ -59,7 +63,7 @@
   &__date {
     position: relative;
     flex-direction: column;
-    max-width: 250px;
+    max-width: 251px;
   }
 
   &__date-inputs {
@@ -113,10 +117,29 @@
       font-family: @font1;
       font-weight: 700;
       font-size: 18px;
+
+      @media @bw1340 {
+        margin-bottom: 12px;
+      }
+
+      @media @bw768 {
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__input {
+    @media @bw768 {
+      margin-bottom: 30px;
     }
   }
 
   &__textarea {
-    height: 150px;
+    height: 149px;
+
+    @media @bw768 {
+      height: 234px;
+    }
   }
 }
