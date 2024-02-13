@@ -21,7 +21,7 @@
     padding: 72px 40px 50px;
   }
 
-  @media @bw768 {
+  @media @bw650 {
     padding: 80px 20px 50px;
   }
 
@@ -46,6 +46,14 @@
     @media @bw1340 {
       max-width: 89.5833vw;
     }
+
+    @media @bw650 {
+      max-width: 69.231vw;
+    }
+
+    @media @bw450 {
+      max-width: 87.5vw;
+    }
   }
 
   &__sticky-close {
@@ -63,11 +71,14 @@
     top: -30px;
     right: -30px;
 
-    @media @bw1340 {
-      right: -2px;
+    @media @bw650 {
+      width: 48px;
+      height: 48px;
+      top: -24px;
+      right: -24px;
     }
 
-    @media @bw768 {
+    @media @bw450 {
       width: 36px;
       height: 36px;
       top: -18px;
@@ -75,9 +86,9 @@
     }
 
     .x-btn__icon {
-      @media @bw768 {
-        width: 21px;
-        height: 21px;
+      @media @bw650 {
+        width: 22px;
+        height: 22px;
       }
     }
   }
@@ -89,7 +100,7 @@
     margin: 0 auto;
     padding: 0 40px 40px;
 
-    @media @bw768 {
+    @media @bw450 {
       padding: 0 20px 40px;
     }
   }
@@ -99,7 +110,6 @@
     margin: -40px 0 70px -85px;
     padding: 10px 85px;
     max-width: 595px;
-    min-height: 80px;
     background-color: @black;
     color: @white;
     font-family: @font2;
@@ -115,16 +125,33 @@
     }
 
     @media @bw1340 {
-      max-width: 495px;
       margin-left: -27px;
       padding: 10px 60px 10px 18px;
     }
 
+    @media @bw1170 {
+      min-width: 465px;
+      max-width: 50.855vw;
+    }
+
     @media @bw768 {
-      max-width: 225px;
-      min-height: 77px;
+      min-width: auto;
+      max-width: 60.547vw;
+      font-size: 19px;
+    }
+
+    @media @bw650 {
+      max-width: 52.308vw;
       margin: -30px 0 40px -6px;
-      padding: 9px 22px 11px 20px;
+      padding: 10px 22px 10px 20px;
+    }
+
+    @media @bw500 {
+      font-size: 16px;
+    }
+
+    @media @bw450 {
+      max-width: 70.3125vw;
       font-size: 14px;
       line-height: 1.357;
     }
