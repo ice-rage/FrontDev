@@ -3,21 +3,49 @@
 
   &__listing {
     margin-top: 138px;
+
+    @media @bw1020 {
+      margin-top: 90px;
+    }
+
+    @media @bw450 {
+      margin-top: 80px;
+    }
   }
 
   &__arrow-link {
     align-self: center;
     max-width: 128px;
     margin: 70px auto 0;
+
+    @media @bw1660 {
+      margin-top: 60px;
+    }
+
+    @media @bw1020 {
+      max-width: 100px;
+    }
+
+    @media @bw650 {
+      margin-top: 50px;
+    }
   }
 
   &__additional-services {
     padding-top: 100px;
   }
 
-  &__rates-table {
+  &__price-table {
     max-width: 1334px;
     margin: 60px auto 50px;
+
+    @media @bw1660 {
+      margin-bottom: 40px;
+    }
+
+    @media @bw450 {
+      margin: 30px -20px;
+    }
   }
 
   &__info {

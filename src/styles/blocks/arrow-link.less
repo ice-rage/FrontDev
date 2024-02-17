@@ -7,19 +7,27 @@
   &--vertical {
     flex-direction: column;
     gap: 18px;
+
+    @media @bw1020 {
+      gap: 16px;
+    }
+
+    .arrow__icon {
+      transform: rotate(90deg);
+    }
   }
 
   &--vertical &__arrow {
-    justify-self: flex-end;
-    transform: rotate(90deg);
+    height: 91px;
+
+    @media @bw1020 {
+      height: 67px;
+      padding-bottom: 4px;
+    }
   }
 
   &__link,
   &__arrow {
     pointer-events: auto;
-  }
-
-  &__link {
-    padding: 5px 5px 5px 0;
   }
 }

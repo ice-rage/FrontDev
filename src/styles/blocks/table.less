@@ -4,10 +4,35 @@
   color: @black;
   text-align: center;
 
+  @media @bw450 {
+    width: auto;
+  }
+
+  &__tr {
+    &:nth-child(2n-1) {
+      background-color: fade(@black, 3%);
+    }
+
+    &:nth-child(2n) {
+      @media @bw450 {
+        height: 52px;
+      }
+    }
+  }
+
+  &__tr:nth-child(2n) &__td,
+  &__th,
+  &__footer-th {
+    &:nth-child(2) {
+      @media @bw450 {
+        background-color: fade(@black, 3%);
+      }
+    }
+  }
+
   &__th,
   &__footer-th {
     box-sizing: border-box;
-    padding-top: 10px;
     border-right: 1px solid #BFBFBF;
     text-transform: uppercase;
 
@@ -25,23 +50,70 @@
     height: 85px;
     font-weight: 600;
     font-size: 18px;
-  }
 
-  &__tr {
-    &:nth-child(2n-1) {
-      background-color: fade(@black, 3%);
+    @media @bw1020 {
+      font-size: 14px;
+    }
+
+    @media @bw768 {
+      padding: 10px;
+    }
+
+    &:nth-child(1) {
+      width: 400px;
+
+      @media @bw1340 {
+        width: 31.746%;
+        font-size: 16px;
+      }
+
+      @media @bw1020 {
+        width: 24.479%;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 21.739%;
+
+      @media @bw1660 {
+        width: 22.381%;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 22.789%;
+
+      @media @bw1660 {
+        width: 23.571%;
+      }
+
+      @media @bw1020 {
+        width: 24.718%;
+      }
     }
   }
 
   &__body-th {
     box-sizing: border-box;
     height: 50px;
-    padding: auto 10px;
     border-top: 1px solid #BFBFBF;
     border-bottom: 1px solid #BFBFBF;
     font-weight: 400;
     font-size: 18px;
     text-align: left;
+
+    @media @bw1340 {
+      font-size: 16px;
+    }
+
+    @media @bw1020 {
+      font-size: 14px;
+      padding-right: 70px;
+    }
+
+    @media @bw768 {
+      padding-right: 5.5vw;
+    }
   }
 
   &__td {
@@ -52,6 +124,14 @@
     font-weight: 600;
     font-size: 16px;
 
+    @media @bw1020 {
+      padding: 5px;
+    }
+
+    @media @bw450 {
+      border-left: none;
+    }
+
     &:last-child {
       border-right: none;
       padding-right: 0;
@@ -61,5 +141,11 @@
   &__footer-th {
     height: 69px;
     font-size: 0;
+
+    @media @bw450 {
+      height: 84px;
+      font-weight: 300;
+      font-size: 16px;
+    }
   }
 }

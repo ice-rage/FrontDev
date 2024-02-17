@@ -37,7 +37,7 @@
             начинается сложная, но интересная работа, результатом которой будет проведение вашего 
             мероприятия на высшем уровне.
           </p>
-          <table class="events__rates-table table">
+          <table class="events__price-table table" id="js-priceTable">
             <thead class="table__head">
               <tr class="table__head-tr">
                 <th class="table__th"></th>
@@ -51,7 +51,7 @@
                 <th class="table__body-th">Стоимость за час</th>
                 <td class="table__td">1 000</td>
                 <td class="table__td">3 000</td>
-                <td class="table__td">от 6 000 ₽</td>
+                <td class="table__td">от 6 000</td>
               </tr>
               <tr class="table__tr">
                 <th class="table__body-th">Ведущий мероприятия</th>
@@ -94,7 +94,7 @@
                 </td>
               </tr>
               <tr class="table__tr">
-                <th class="table__body-th">Ведущий мероприятия</th>
+                <th class="table__body-th">Декор</th>
                 <td class="table__td"></td>
                 <td class="table__td"></td>
                 <td class="table__td">
@@ -178,5 +178,8 @@
     @@include('blocks/page-footer.html')
 
     @@include('blocks/event-pp.html')
+
+    <script src="scripts/jquery-3.7.1.min.js"></script>
+    <script src="scripts/price-table.min.js"></script>
   </body>
 </html>
