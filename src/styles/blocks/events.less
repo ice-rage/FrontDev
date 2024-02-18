@@ -1,5 +1,9 @@
 .events {
-  padding-bottom: 90px;
+  padding-bottom: 55px;
+
+  @media @bw1020 {
+    padding-bottom: 40px;
+  }
 
   &__listing {
     margin-top: 138px;
@@ -50,5 +54,9 @@
 
   &__info {
     margin-top: 100px;
+
+    @media @bw450 {
+      margin-top: 90px;
+    }
   }
 }
