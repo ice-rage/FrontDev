@@ -14,13 +14,21 @@
   }
 
   &::before {
-    right: 29px;
+    right: 27px;
     transform: rotate(45deg);
+
+    @media @bw500 {
+      right: 17px;
+    }
   }
 
   &::after {
-    right: 23px;
+    right: 22px;
     transform: rotate(-45deg);
+
+    @media @bw500 {
+      right: 12px;
+    }
   }
 }
 
@@ -78,7 +86,8 @@
   overflow: hidden;
 
   & .selectric-scroll {
-    .custom-scroll();
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   & li {
