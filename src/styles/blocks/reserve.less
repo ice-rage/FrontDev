@@ -113,24 +113,11 @@
   }
 
   &__scheme-wrapper {
-    position: relative;
-    width: 100%;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 100%;
-      padding-top: 51.15384%;
-    }
+    .responsive-height(@after-pt: 51.15384%);
   }
 
   &__scene {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    .responsive-content();
   }
   
   &__order {
