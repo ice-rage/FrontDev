@@ -20,19 +20,16 @@
   &__wrapper {
     display: flex;
     width: 100%;
-    height: 49px;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
+  }
 
-    @media @bw768 {
-      height: 46px;
-    }
+  &__input-wrapper {
+    width: 100%;
   }
   
   &__input {
     box-sizing: border-box;
-    flex-grow: 1;
     width: 100%;
-    height: 100%;
     padding: 15px 15px 15px 28px;
     border: none;
     background-color: @white;
@@ -54,6 +51,7 @@
   &__submit {
     box-sizing: border-box;
     display: inline-block;
+    height: 49px;
     padding: 15px 23px;
     border: none;
     border-radius: 0;
@@ -63,6 +61,7 @@
     transition: background-color 0.2s;
 
     @media @bw768 {
+      height: 46px;
       font-size: 12px;
     }
 
@@ -79,10 +78,6 @@
     &:active {
       background-color: @red_A5;
     }
-  }
-
-  &__check {
-    padding-left: 39px;
   }
 
   &__check .check__mark {

@@ -30,7 +30,7 @@
     ),
     min: $.validator.format(
       "Пожалуйста, введите число, большее или равное {0}."
-    )
+    ),
   });
 
   $.validator.addMethod(
@@ -43,20 +43,57 @@
     },
     "Введите корректный e-mail"
   );
-        
+
   const eventForm = $("#js-eventForm");
 
   if (eventForm.length) {
     eventForm.validate({
-      errorElement: "span"
+      errorElement: "span",
     });
   }
 
   const subscriptionForm = $("#js-subscriptionForm");
 
   if (subscriptionForm.length) {
+    const subscriptionAction = subscriptionForm.attr("action");
+    const subscriptionEmail = subscriptionForm.find("#js-subscriptionEmail");
+
     subscriptionForm.validate({
-      errorElement: "span"
+      errorElement: "span",
+      submitHandler: function (form, event) {
+        event.preventDefault();
+
+        // $.ajax({
+        //   url: subscriptionAction,
+        //   method: "POST",
+        //   data: {
+        //     email: subscriptionEmail.val()
+        //   },
+        //   success: function () {
+        //     subscriptionEmail.val("");
+        //     subscriptionEmail.trigger("blur");
+        //     toastr.success("Вы успешно подписались на рассылку новостей");
+        //   },
+        //   error: function () {
+        //     toastr.error("Пожалуйста, попробуйте еще раз", "Ошибка");
+        //   }
+        // });
+
+        fetch(subscriptionAction, {
+          method: "POST",
+          body: {
+            email: subscriptionEmail.val(),
+          },
+        })
+          .then(() => {
+            subscriptionEmail.val("");
+            subscriptionEmail.trigger("blur");
+            toastr.success("Вы успешно подписались на рассылку новостей");
+          })
+          .catch(() => {
+            toastr.error("Пожалуйста, попробуйте еще раз", "Ошибка");
+          });
+      },
     });
-  }   
+  }
 })();

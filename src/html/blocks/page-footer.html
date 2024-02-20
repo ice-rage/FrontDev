@@ -40,14 +40,18 @@
       </div>
 
       <div class="page-footer__right-block">
-        <form class="page-footer__subscription-form subscription-form" id="js-subscriptionForm">
+        <form 
+          action="https://jsonplaceholder.typicode.com/posts" 
+          class="page-footer__subscription-form subscription-form" 
+          id="js-subscriptionForm">
           <h4 class="subscription-form__title">Подпишись и будь в курсе происходящего</h4>
     
           <div class="subscription-form__wrapper">
-            <div class="subscription-form__error-wrapper">
-              <input type="email" name="email" placeholder="E-mail" 
-                   class="subscription-form__input" required>
+            <div class="subscription-form__input-wrapper">
+              <input type="email" name="email" placeholder="E-mail" class="subscription-form__input" 
+                   id="#js-subscriptionEmail" required>
             </div>
+            
             <button type="submit" class="subscription-form__submit">Подписаться</button>
           </div>
   
