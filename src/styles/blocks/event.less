@@ -172,17 +172,18 @@
   }
 
   &__picture {
-    .responsive-height(@w: 52.704%; @after-pt: 107.042%);
+    .responsive-parent(@w: 52.704%; @after-pt: 107.042%);
+
     margin-left: 208px;
 
     @media @bw1660 {
-      .responsive-height(@w: 49.883%; @after-pt: 107.042%);
+      .responsive-parent(@w: 49.883%; @after-pt: 107.042%);
 
       margin-left: 200px;
     }
 
     @media @bw1170 {
-      .responsive-height(@w: 44.872%; @after-pt: 106.939%);
+      .responsive-parent(@w: 44.872%; @after-pt: 106.939%);
 
       margin-left: 19.531vw;
     }
@@ -198,7 +199,7 @@
   }
 
   &__img {
-    .responsive-content();
+    .responsive-child();
   }
 
   &__time {

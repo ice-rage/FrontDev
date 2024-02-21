@@ -36,31 +36,32 @@
   }
 
   &__picture {
-    .responsive-height(@after-pt: 16.927%);
+    .responsive-parent(@after-pt: 16.927%);
 
+    display: block;
     margin: 70px 0;
 
     @media @bw1660 {
-      .responsive-height(@w: 113.3%; @after-pt: 16.927%);
+      .responsive-parent(@w: 113.3%; @after-pt: 16.927%);
 
       margin: 70px -6.64%;
     }
 
     @media @bw1340 {
-      .responsive-height(@w: 126.92%; @after-pt: 16.927%);
+      .responsive-parent(@w: 126.92%; @after-pt: 16.927%);
 
       margin: 50px -13.41%; 
     }
 
     @media @bw768 {
-      .responsive-height(@w: 136.615%; @after-pt: 16.927%);
+      .responsive-parent(@w: 136.615%; @after-pt: 16.927%);
 
       margin: 29px -18.438%;    
     }
   }
 
   &__img {
-    .responsive-content();
+    .responsive-child();
   }
 
   &__text {

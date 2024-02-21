@@ -93,9 +93,8 @@
   }
 }
 
-.responsive-height(@w: 100%; @after-pt) {
+.responsive-parent(@w: 100%; @after-pt) {
   position: relative;
-  display: block;
   width: @w;
 
   &::after {
@@ -106,7 +105,7 @@
   }
 }
 
-.responsive-content {
+.responsive-child {
   position: absolute;
   display: block;
   top: 0;
