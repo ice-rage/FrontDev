@@ -140,11 +140,13 @@
             </ol>
           </div>
 
-          @@include('blocks/reserve.html')
+          @@include('blocks/reserve.html', { "class": "event__reserve" })
         </div>
       </article>
     </main>
 
     @@include('blocks/page-footer.html')
+
+    <script src="scripts/restaurant-map-handle.min.js"></script>
   </body>
 </html>

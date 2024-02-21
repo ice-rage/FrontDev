@@ -60,7 +60,7 @@
 
     subscriptionForm.validate({
       errorElement: "span",
-      submitHandler: function (form, event) {
+      submitHandler: function (event) {
         event.preventDefault();
 
         // $.ajax({
