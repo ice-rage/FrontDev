@@ -22,6 +22,11 @@
     border: none;
     background-color: @red_BC;
     color: @white;
+
+    &:disabled,
+    &[disabled] {
+      background-color: fade(@red_BC, 50%);
+    }
   }
 
   &:hover {
@@ -29,5 +34,10 @@
       background-color: @black;
       color: @white;
     }
+  }
+
+  &:disabled,
+  &[disabled] {
+    pointer-events: none;
   }
 }
