@@ -44,37 +44,5 @@
   <script defer src="scripts/jquery.validate-init.js"></script>
 
   <script src="scripts/toastr.min.js"></script>
-
-  <script>
-    $("html").css({ display: "none" });
-
-    $(document).ready(function () {
-
-      var hashURL = location.hash;
-
-      if (hashURL != "" && hashURL.length > 1) {
-
-        $(window).scrollTop(0);
-        $("html").css({ display: "block" });
-
-        smoothScrollTo(hashURL);
-      } else {
-        $("html").css({ display: "block" });
-      }
-    });
-
-    function smoothScrollTo(anchor) {
-
-      const additionalPixels = 30;
-      const topOffset = $("#js-pageHeader").height() + additionalPixels;
-      var targetPosition = $(anchor).offset().top - topOffset;
-
-      $("html, body").animate({
-        scrollTop: targetPosition,
-      }, {
-        duration: 2000,
-        easing: "easeInOutCubic"
-      });
-    }
-  </script>
+  <script src="scripts/smooth-scroll-to.min.js"></script>
 </head>

@@ -51,21 +51,5 @@
     
     <script src="scripts/event-pp-handle.min.js"></script>
     <script type="module" src="scripts/main.min.js"></script>
-    <script>
-      $("#js-nav a[href]").bind("click", function(event) {
-
-        const anchor = $(this).attr("href");
-        const scrollablePage = anchor.substring(0, anchor.indexOf("#"));
-        
-        if (scrollablePage == "index.html") {
-          const blockToScroll = anchor.substring(anchor.indexOf("#"), anchor.length);
-          smoothScrollTo(blockToScroll);
-        } else {
-          smoothScrollTo(anchor);
-        }
-        
-        return false;
-      });
-    </script>
   </body>
 </html>
