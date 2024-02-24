@@ -9,7 +9,7 @@
 
     // Изменяем структуру таблицы при выполнении двух условий: 
     // 1) ширина вьюпорта менее 450 пикселей
-    if (document.body.clientWidth < 450) {
+    if (document.documentElement.clientWidth < 450) {
 
       // 2) структура таблицы еще не была изменена ранее
       if (!isTableStructureChanged) {
