@@ -1,5 +1,5 @@
 .event {
-  padding: 38px 0 55px;
+  padding: 38px 0 90px;
 
   @media @bw1340 {
     padding: 40px 0;
@@ -47,7 +47,7 @@
     display: flex;
     max-width: 943px;
     height: 532px;
-    margin: 80px 0 0 calc(50% - 456px);
+    margin: 80px 0 80px calc(50% - 456px);
 
     @media @bw1660 {
       max-width: 854px;
@@ -207,19 +207,19 @@
     display: flex;
     align-items: flex-end;
     gap: 12px;
-
-    :last-child {
-      margin-bottom: 4px;
-    }
   }
 
   &__container {
     .container();
   }
 
+  &__program {
+    margin-bottom: 80px;
+  }
+
   &__content {
     max-width: 868px;
-    margin: 80px 0;
+    //margin: 80px 0;
 
     @media @bw1660 {
       max-width: 831px;
@@ -233,5 +233,13 @@
     @media @bw768 {
       margin: 60px 0 40px 0;
     }
+  }
+
+  &__description {
+    margin-bottom: 50px;
+  }
+
+  &__tracklist {
+    margin-bottom: 80px;
   }
 }

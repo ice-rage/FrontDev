@@ -2,7 +2,20 @@
   "use strict";
 
   let isTableStructureChanged = false;
-  let priceTable = null;
+
+  // Получаем содержимое таблицы
+  let priceTable = document.querySelector("#js-priceTable");
+
+  // Излекаем значение data-атрибута таблицы, содержащего валюту
+  const currency = priceTable.getAttribute("data-currency");
+
+  // Определяем кол-во столбцов таблицы
+  const columnCount = priceTable.rows[0].querySelectorAll("th").length;
+  
+  // В первой строке добавляем валюту во все столбцы, кроме боковика
+  for (let i = 1; i < columnCount; i++) {
+    priceTable.rows[1].cells[i].innerHTML += ` ${currency}`;
+  }
 
   // Функция, в которой происходит изменение (восстановление) таблицы расценок
   const changeTableStructure = function () {
@@ -13,9 +26,6 @@
 
       // 2) структура таблицы еще не была изменена ранее
       if (!isTableStructureChanged) {
-
-        // Получаем содержимое таблицы
-        priceTable = document.querySelector("#js-priceTable");
 
         // Получаем все строки таблицы
         const rows = priceTable.rows;
