@@ -40,6 +40,10 @@
       @media @bw1660 {
         margin-bottom: 50px;
       }
+
+      @media @bw768 {
+        margin-bottom: 40px;
+      }
     }
   }
 
@@ -80,6 +84,14 @@
     .responsive-parent(@after-pt: 62.3126%);
 
     transition: box-shadow 0.2s;
+
+    @media @bw1020 {
+      .responsive-parent(@after-pt: 62%);
+    }
+
+    @media @bw768 {
+      .responsive-parent(@after-pt: 62.5%);
+    }
   }
 
   &__img {
@@ -136,6 +148,10 @@
 
     @media @bw1170 {
       margin: auto 0 20px;
+    }
+
+    @media @bw768 {
+      margin-bottom: 10px;
     }
 
     &:hover {

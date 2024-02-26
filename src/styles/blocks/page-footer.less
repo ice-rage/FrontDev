@@ -1,13 +1,13 @@
 .page-footer {
   box-sizing: border-box;
-  padding: 60px 0 75px;
+  padding: 65px 0 75px;
 
-  @media @bw1020 {
-    padding: 60px 0;
+  @media @bw1660 {
+    padding-top: 100px;
   }
 
   @media @bw650 {
-    padding: 60px 0 50px 0;
+    padding-bottom: 50px;
   }
 
   &__container {
@@ -24,6 +24,10 @@
     justify-content: space-between;
     gap: 7.346%;
     margin-bottom: 60px;
+
+    @media @bw1020 {
+      margin-bottom: 58px;
+    }
   }
 
   &__decoration {
@@ -58,16 +62,14 @@
     margin-bottom: 60px;
     padding-left: 26px;
 
-    @media @bw1660 {
-      margin-bottom: 58px;
-    }
-
     @media @bw1020 {
       margin-bottom: 178px;
     }
 
     @media @bw650 {
-      margin-bottom: 60px;
+      gap: 27px;
+      margin-bottom: 59px;
+      padding: 1px 0 3px 26px;
     }
 
     &::before {
@@ -102,6 +104,14 @@
 
     &:active {
       color: @red_A5;
+    }
+  }
+
+  &__nav-link {
+    height: 22px;
+
+    @media @bw768 {
+      height: 19px;
     }
   }
 

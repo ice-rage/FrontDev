@@ -31,13 +31,14 @@
 
     @media @bw650 {
       font-size: 4.0625vw;
-      padding: 0 20px;
     }
   }
 
-  // &__title {
-  //   margin: 0;
-  // }
+  &__title {
+    @media @bw650 {
+      padding: 0 25.63% 0 27.5%;
+    }
+  }
 
   &__picture {
     .responsive-parent(@after-pt: 16.927%);
@@ -71,5 +72,9 @@
   &__text {
     margin: 0 auto;
     max-width: 990px;
+
+    @media @bw650 {
+      padding: 0 20px;
+    }
   }
 }

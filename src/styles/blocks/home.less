@@ -1,11 +1,14 @@
 .home {
-  &__offers {
-    margin-bottom: 200px;
-
+  &__offers,
+  .section-title {
     @media @bw1660 {
       max-width: 604px;
     }
+  }
 
+  &__offers {
+    margin-bottom: 200px;
+    
     @media @bw1340 {
       margin-bottom: 130px;
     }
@@ -17,6 +20,14 @@
 
   &__about {
     margin-bottom: 90px;
+
+    @media @bw1660 {
+      margin-bottom: 100px;
+    }
+
+    @media @bw960 {
+      margin-bottom: 50px;
+    }
   }
 
   &__upcoming {
@@ -59,7 +70,17 @@
     }
 
     @media @bw1340 {
-      margin-bottom: 100px;
+      margin-bottom: 104px;
+    }
+  }
+
+  .section-title {
+    @media @bw1340 {
+      max-width: 566px;
+    }
+
+    @media @bw650 {
+      max-width: 280px;
     }
   }
 }

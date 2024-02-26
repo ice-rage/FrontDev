@@ -15,7 +15,7 @@
     }
 
     @media @bw768 {
-      padding: 40px 0;
+      padding: 50px 0 40px 0;
     }
   }
 
@@ -28,6 +28,24 @@
     @media @bw1020 {
       padding-right: 0;
     }
+
+    @media @bw768 {
+      padding-right: 0;
+    }
+  }
+
+  &__title {
+    @media @bw1020 {
+      margin-left: calc(50% - 298px);
+    }
+
+    @media @bw768 {
+      margin-left: calc(50% - 293px);
+    }
+
+    @media @bw650 {
+      margin-left: calc(50% - 150px);
+    }
   }
 
   &__link {
@@ -39,6 +57,7 @@
     }
 
     @media @bw768 {
+      margin-right: 20px;
       padding-left: 20px;
     }
   }

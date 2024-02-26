@@ -8,10 +8,11 @@
     }
 
     @media @bw1020 {
-      margin-left: 0;
+      margin: 0 0 24px;
     }
 
     @media @bw768 {
+      margin-bottom: 14px;
       font-weight: 400;
       font-size: 13px;
     }
@@ -34,24 +35,22 @@
     border: none;
     background-color: @white;
     color: @black;
+    font-size: 14px;
+    line-height: 1.362;
 
     @media @bw768 {
       padding: 17px 15px 13px 20px;
     }
 
-    &::placeholder {
-      font-size: 14px;
-
-      @media @bw768 {
-        font-size: 12px;
-      }
+    @media @bw768 {
+      font-size: 12px;
     }
   }
 
   &__submit {
     box-sizing: border-box;
     display: inline-block;
-    height: 49px;
+    max-height: 49px;
     padding: 15px 23px;
     border: none;
     border-radius: 0;
@@ -61,7 +60,7 @@
     transition: background-color 0.2s;
 
     @media @bw768 {
-      height: 46px;
+      max-height: 46px;
       font-size: 12px;
     }
 
@@ -77,6 +76,16 @@
 
     &:active {
       background-color: @red_A5;
+    }
+  }
+
+  &__check {
+    justify-content: center;
+
+    .check__label--fsz14 {
+      @media @bw768 {
+        padding-top: 0;
+      }
     }
   }
 

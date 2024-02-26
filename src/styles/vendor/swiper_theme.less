@@ -102,7 +102,8 @@
   }
 
   @media @bw768 {
-    margin-top: 60px;
+    width: 280px;
+    margin: 60px 0 18px calc(50% - 150px);
   }
 }
 
@@ -128,6 +129,10 @@
   background-color: @gray_BF;
   background-clip: padding-box;
   opacity: 1;
+
+  @media @bw1020 {
+    width: 9px;
+  }
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -138,4 +143,8 @@
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {
   margin: 2px 3px;
+
+  @media @bw1020 {
+    margin: 2px;
+  }
 }
