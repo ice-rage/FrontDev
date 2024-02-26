@@ -6,7 +6,7 @@
     content: "";
     position: absolute;
     top: 27px;
-    width: 8px;
+    width: 6px;
     height: 2px;
     background-color: @black;
     transition: transform 0.2s;
@@ -14,21 +14,21 @@
   }
 
   &::before {
-    right: 27px;
+    right: 30px;
     transform: rotate(45deg);
 
-    @media @bw500 {
-      right: 17px;
-    }
+    // @media @bw500 {
+    //   right: 17px;
+    // }
   }
 
   &::after {
-    right: 22px;
+    right: 26px;
     transform: rotate(-45deg);
 
-    @media @bw500 {
-      right: 12px;
-    }
+    // @media @bw500 {
+    //   right: 12px;
+    // }
   }
 }
 
@@ -67,7 +67,7 @@
     display: flex;
     align-items: center;
     height: 100%;
-    margin: 0 23px;
+    margin: 0 20px;
     padding: 17px 0 16px;
     font-size: 16px;
     line-height: 1;
