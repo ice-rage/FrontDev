@@ -47,7 +47,7 @@
             const newCell = newRow.insertCell(1);
   
             // Задаем стилевой класс для ячейки
-            newCell.className = "table__td";
+            newCell.className = "table__body-th";
   
             // Копируем в нее содержимое из первой ячейки следующей строки
             newCell.innerHTML = rows[i + 1].cells[0].innerHTML;
