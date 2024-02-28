@@ -1,6 +1,8 @@
 (function () {
   "use strict";
 
+  if (!$) return;
+
   let isTableStructureChanged = false;
 
   // Получаем содержимое таблицы

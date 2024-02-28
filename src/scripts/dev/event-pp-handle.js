@@ -38,6 +38,8 @@
       eventPP.addEventListener("click", closeEventPP);
     });
 
+    if (!$) return;
+
     /* Кастомизируем селект для выбора кол-ва посетителей мероприятия */
     const jsSelectric = $(".js-selectric");
 
