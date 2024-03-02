@@ -1,5 +1,4 @@
 .article-card {
-  position: relative;
   box-sizing: border-box;
   display: flex;
   width: 100%;
@@ -62,6 +61,7 @@
     width: 467px;
     margin-right: 60px;
     font-size: 0;
+    text-decoration: none;
 
     @media @bw1170 {
       width: 100%;
@@ -83,6 +83,7 @@
   &__picture {
     .responsive-parent(@after-pt: 62.3126%);
 
+    display: block;
     transition: box-shadow 0.2s;
 
     @media @bw1020 {
