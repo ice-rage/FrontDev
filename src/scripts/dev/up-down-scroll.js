@@ -43,12 +43,12 @@
       // Текущее положение прокрутки
       const scrollPosition = $(window).scrollTop();
 
-      // Высота HTML-документа
-      const htmlHeight = $(document).height();
-
       // Высота вьюпорта браузера
       const viewportHeight = $(window).height();
 
+      // Высота HTML-документа
+      const htmlHeight = $(document).height();
+      
       // Если находимся строго вверху страницы, то добавляем к кнопке модификатор 
       // "вниз"
       if (scrollPosition == 0) {
@@ -57,7 +57,7 @@
   
       // Если находимся строго внизу страницы, то убираем с кнопки модификатор "вниз",
       // чтобы она перешла в состояние "вверх"
-      if (scrollPosition.toFixed() == htmlHeight - viewportHeight) {
+      if (Math.round(scrollPosition) + viewportHeight == htmlHeight) {
         upDownBtn.removeClass(downBtnClass);
       }
     });
