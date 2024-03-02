@@ -48,7 +48,7 @@
 
       // Высота HTML-документа
       const htmlHeight = $(document).height();
-      
+
       // Если находимся строго вверху страницы, то добавляем к кнопке модификатор 
       // "вниз"
       if (scrollPosition == 0) {
@@ -57,7 +57,7 @@
   
       // Если находимся строго внизу страницы, то убираем с кнопки модификатор "вниз",
       // чтобы она перешла в состояние "вверх"
-      if (Math.round(scrollPosition) + viewportHeight == htmlHeight) {
+      if (Math.ceil(scrollPosition) + viewportHeight >= htmlHeight) {
         upDownBtn.removeClass(downBtnClass);
       }
     });
